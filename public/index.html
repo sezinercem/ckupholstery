@@ -522,7 +522,7 @@
             }
         }
 
-        /* Hamburger menu styles (mobile only) */
+        /* Hamburger menu styles (mobile only, matching desktop) */
         @media (max-width: 900px) {
             .header-container nav {
                 display: none;
@@ -539,11 +539,13 @@
                 top: 50%;
                 transform: translateY(-50%);
                 z-index: 1001;
+                background: transparent;
+                border: none;
             }
             .hamburger span {
                 height: 4px;
                 width: 100%;
-                background: #dec17b;
+                background: #222; /* Match desktop nav text color */
                 margin: 5px 0;
                 border-radius: 2px;
                 transition: 0.3s;
@@ -556,7 +558,7 @@
                 width: 70vw;
                 max-width: 320px;
                 height: 100vh;
-                background: #fff;
+                background: #fff; /* Match desktop nav background */
                 box-shadow: -2px 0 16px rgba(0,0,0,0.08);
                 z-index: 2000;
                 flex-direction: column;
@@ -568,15 +570,16 @@
                 display: flex;
             }
             .mobile-nav a {
-                color: #222;
+                color: #222; /* Match desktop nav text color */
                 font-size: 1.18rem;
                 font-weight: 500;
                 text-decoration: none;
                 margin-bottom: 18px;
                 transition: color 0.2s;
+                font-family: inherit;
             }
             .mobile-nav a:hover {
-                color: #dec17b;
+                color: #dec17b; /* Match desktop nav hover */
             }
             @keyframes slideIn {
                 from { right: -100vw; }
@@ -587,7 +590,7 @@
                 top: 18px;
                 right: 18px;
                 font-size: 2rem;
-                color: #dec17b;
+                color: #222; /* Match desktop nav text color */
                 background: none;
                 border: none;
                 cursor: pointer;
@@ -600,7 +603,7 @@
         /* Hero slideshow mobile override */
         @media (max-width: 900px) {
             .hero-slideshow {
-                background: #fff;
+                background: #f9f9f9; /* Match desktop hero background */
                 padding: 32px 0 0 0;
                 min-height: unset;
                 position: relative;
@@ -613,26 +616,27 @@
                 display: none !important;
             }
             .hero-overlay {
-                width: 92vw;
+                width: 96vw;
                 max-width: 98vw;
                 margin: 0 auto;
                 background: none;
                 box-shadow: none;
                 padding: 0 0 24px 0;
+                text-align: center;
             }
             .hero-overlay h2 {
-                font-size: 1.15rem;
+                font-size: 1.05rem;
                 line-height: 1.35;
                 margin-bottom: 10px;
                 font-weight: 700;
                 color: #222;
-                text-align: left;
+                text-align: center;
             }
             .hero-overlay p {
-                font-size: 0.98rem;
+                font-size: 0.95rem;
                 line-height: 1.5;
                 color: #444;
-                text-align: left;
+                text-align: center;
             }
             .hero-btn {
                 font-size: 1rem;
