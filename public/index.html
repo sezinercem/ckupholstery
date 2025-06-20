@@ -655,7 +655,7 @@
         </span>
     </div>
     <header>
-        <div class="header-container" style="position:relative;">
+        <div class="header-container">
             <a href="index.html">
                 <img src="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png" alt="CK Upholstery Logo" class="logo">
             </a>
@@ -665,20 +665,6 @@
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact Us</a>
             </nav>
-            <!-- Hamburger icon for mobile -->
-            <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <!-- Mobile nav drawer -->
-            <div class="mobile-nav" id="mobileNav" aria-label="Mobile menu">
-                <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
-                <a href="index.html">Home</a>
-                <a href="services.html">Products & Services</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact Us</a>
-            </div>
         </div>
     </header>
     
@@ -941,6 +927,7 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
     <script>
+      // Hero slideshow JS
       const slides = document.querySelectorAll('.hero-slideshow .slide');
       let currentSlide = 0;
 
@@ -967,30 +954,6 @@
         currentFabric = (currentFabric + 1) % fabricSlides.length;
         showFabric(currentFabric);
       }, 3000);
-
-      // Hamburger menu JS
-      const hamburger = document.getElementById('hamburger');
-      const mobileNav = document.getElementById('mobileNav');
-      const mobileNavClose = document.getElementById('mobileNavClose');
-
-      function openMobileNav() {
-        mobileNav.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      }
-      function closeMobileNav() {
-        mobileNav.classList.remove('open');
-        document.body.style.overflow = '';
-      }
-      hamburger.addEventListener('click', openMobileNav);
-      hamburger.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') openMobileNav();
-      });
-      mobileNavClose.addEventListener('click', closeMobileNav);
-
-      // Close mobile nav on link click (optional)
-      document.querySelectorAll('.mobile-nav a').forEach(link => {
-        link.addEventListener('click', closeMobileNav);
-      });
     </script>
 </body>
 </html>
