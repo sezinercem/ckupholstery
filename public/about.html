@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | CK Upholstery</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Announcement Bar Styles */
+        .announcement-bar {
+            width: 100%;
+            background: #dec17b;
+            color: #222;
+            text-align: center;
+            font-size: 1rem;
+            padding: 7px 0 6px 0;
+            letter-spacing: 0.02em;
+            font-family: inherit;
+            border-bottom: 1px solid #e7d7a7;
+            z-index: 10000;
+            position: relative;
+        }
+        .announcement-bar a {
+            color: #222;
+            text-decoration: underline;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .announcement-bar a:hover {
+            color: #a88c3d;
+        }
+        @media (max-width: 600px) {
+            .announcement-bar {
+                font-size: 0.92rem;
+                padding: 6px 8px 5px 8px;
+            }
+        }
+        .about-main-section {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 48px;
+            max-width: 1800px; /* Increased from 1400px */
+            margin: 60px auto 60px auto;
+            padding: 0 24px;
+        }
+        .about-image-block {
+            flex: 1 1 45%;
+            position: relative;
+            min-width: 320px;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+        }
+        .about-image-block img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+            min-height: 420px;
+            filter: brightness(0.6);
+        }
+        .about-image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            width: 90%;
+            text-shadow: 0 4px 24px rgba(0,0,0,0.25);
+        }
+        .about-content-block {
+            flex: 1 1 55%;
+            background: #fff;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 36px 36px 36px 0;
+            min-width: 320px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        }
+        .about-content-block h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #222;
+        }
+        .about-content-block p {
+            font-size: 1.15rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+        .about-content-block strong {
+            color: #222;
+        }
+        .about-content-block .about-btn {
+            display: inline-block;
+            margin-top: 18px;
+            background: #dec17b;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+            letter-spacing: 1px;
+        }
+        .about-content-block .about-btn:hover {
+            background: #a89c7d;
+        }
+        @media (max-width: 1000px) {
+            .about-main-section {
+                flex-direction: column;
+                gap: 32px;
+            }
+            .about-content-block {
+                padding: 32px 0 0 0;
+                box-shadow: none;
+            }
+            .about-image-block img {
+                min-height: 260px;
+            }
+            .about-image-text {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <span>
+            Looking for custom cushions &amp; premium fabrics? Visit our sister site 
+            <a href="https://www.ckhomeandfurniture.co.uk" target="_blank" rel="noopener">ckhomeandfurniture.co.uk</a>
+        </span>
+    </div>
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png" alt="CK Upholstery Logo" class="logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="#">Products & Services</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-main-section">
+            <div class="about-image-block">
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Upholstery Workshop">
+                <div class="about-image-text">
+                    Upholsterers<br>with conviction
+                </div>
+            </div>
+            <div class="about-content-block">
+                <h2>Established in 2007, CK Upholstery is a trusted name in the industry</h2>
+                <p>
+                    Founded by Murat Yilmaz, who brings more than 16 years of experience to the business.
+                </p>
+                <p>
+                    Murat began his journey at just 14, working on yachts, boats, hotels, and private homes. Through dedication and hard work, <strong>CK Upholstery</strong> was born and is now considered a standard among upholsterers in the United Kingdom.
+                </p>
+                <p>
+                    Murat’s passion for furniture upholstery, combined with his vision and business acumen, has taken <strong>CK Upholstery</strong> to new heights across the UK.
+                </p>
+                <p>
+                    Working alongside his father and two brothers, <strong>CK Upholstery</strong> caters to a wide range of customers in and around Waltham.
+                </p>
+                <p>
+                    <strong>CK Upholstery</strong> is now a brand trusted for all types of <strong>upholstery fabrics</strong> and <strong>furniture restoration</strong>.
+                </p>
+                <p>
+                    Very soon, <strong>CK Upholstery</strong> will introduce online shopping, offering a variety of products for customers to shop from home with ease.
+                </p>
+                <a href="mailto:sales@ckupholstery.co.uk" class="about-btn">GET A NO OBLIGATION QUOTE</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png" alt="CK Upholstery Logo">
+            </div>
+            <nav class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="#">Products & Services</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact Us</a>
+            </nav>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><a href="mailto:sales@ckupholstery.co.uk">sales@ckupholstery.co.uk</a></p>
+            </div>
+        </div>
+        <hr class="footer-separator">
+    </footer>
+</body>
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upholstery, Restoration & Bespoke Furniture Services | CK Upholstery Epping Essex</title>
+    <meta name="description" content="Discover CK Upholstery's expert re-upholstery, restoration, and bespoke furniture services in Epping, Essex. Premium fabrics, vintage revival, and custom solutions for homes, businesses, and hospitality.">
+    <meta name="keywords" content="Upholstery, Furniture Restoration, Bespoke Furniture, Epping, Essex, Re-Upholstery, Vintage Furniture, Fabric Selection, CK Upholstery, Commercial Upholstery, Hospitality Upholstery, Custom Furniture">
+    <meta name="author" content="CK Upholstery">
+    <link rel="canonical" href="https://ckupholstery.co.uk/services.html">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Upholstery, Restoration & Bespoke Furniture Services | CK Upholstery Epping Essex">
+    <meta property="og:description" content="Expert re-upholstery, restoration, and bespoke furniture services for residential, commercial, and hospitality clients in Epping, Essex.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ckupholstery.co.uk/services.html">
+    <meta property="og:image" content="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Upholstery, Restoration & Bespoke Furniture Services | CK Upholstery Epping Essex">
+    <meta name="twitter:description" content="Expert re-upholstery, restoration, and bespoke furniture services for residential, commercial, and hospitality clients in Epping, Essex.">
+    <meta name="twitter:image" content="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png">
+    <!-- Favicon -->
+    <link rel="icon" href="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Upholstery, Restoration & Bespoke Furniture",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "CK Upholstery",
+        "image": "https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png",
+        "url": "https://ckupholstery.co.uk/services.html",
+        "telephone": "+44 7944 715635",
+        "email": "sales@ckupholstery.co.uk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Epping",
+          "addressRegion": "Essex",
+          "addressCountry": "UK"
+        },
+        "description": "CK Upholstery offers expert re-upholstery, restoration, and bespoke furniture services in Epping, Essex. Transform your home or business with premium fabrics and craftsmanship.",
+        "sameAs": [
+          "https://www.facebook.com/ckupholstery",
+          "https://www.instagram.com/ckupholstery"
+        ]
+      },
+      "areaServed": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Epping",
+          "addressRegion": "Essex",
+          "addressCountry": "UK"
+        }
+      },
+      "description": "Expert re-upholstery, restoration, and bespoke furniture services for residential, commercial, and hospitality clients in Epping, Essex."
+    }
+    </script>
+    <!-- End SEO additions -->
+    <style>
+        .services-hero {
+            position: relative;
+            width: 100vw;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            min-height: 220px;
+            background: url('https://ckupholstery.co.uk/wp-content/uploads/2021/04/sofa-bg.jpg') center center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .services-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(34, 34, 34, 0.65);
+            z-index: 1;
+        }
+        .services-hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+        }
+        .services-hero-title {
+            color: #dec17b;
+            font-size: 2.7rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+            font-family: inherit;
+        }
+        .services-hero-underline {
+            display: block;
+            width: 200px;
+            height: 4px;
+            background: #dec17b;
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+        @media (max-width: 700px) {
+            .services-hero-title {
+                font-size: 1.5rem;
+            }
+            .services-hero-underline {
+                width: 120px;
+                height: 3px;
+            }
+            .services-hero {
+                min-height: 120px;
+            }
+        }
+        .services-list-section {
+            background: #f8f6f2;
+            padding: 60px 0 40px 0;
+        }
+        .services-list-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .service-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(222, 193, 123, 0.07);
+            overflow: hidden;
+            max-width: 370px;
+            min-width: 300px;
+            flex: 1 1 320px;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .service-card:hover {
+            box-shadow: 0 8px 32px rgba(222, 193, 123, 0.18);
+            transform: translateY(-6px) scale(1.025);
+        }
+        .service-img-wrap {
+            width: 100%;
+            height: 210px;
+            overflow: hidden;
+            background: #dec17b;
+        }
+        .service-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s;
+        }
+        .service-card:hover .service-img-wrap img {
+            transform: scale(1.07);
+        }
+        .service-content {
+            padding: 28px 24px 32px 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .service-title {
+            color: #dec17b;
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+            letter-spacing: 0.5px;
+        }
+        .service-content p {
+            color: #444;
+            font-size: 1.07rem;
+            line-height: 1.7;
+        }
+        .services-btn-wrap {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .services-contact-btn {
+            background: #dec17b;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 16px 38px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px rgba(222, 193, 123, 0.13);
+            transition: background 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+        .services-contact-btn:hover {
+            background: #a89c7d;
+            box-shadow: 0 4px 18px rgba(222, 193, 123, 0.22);
+        }
+        @media (max-width: 1100px) {
+            .services-list-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+            }
+            .service-card {
+                max-width: 95vw;
+            }
+        }
+        .fabric-selection-section {
+            background: #fff;
+            padding: 60px 0 40px 0;
+            text-align: center;
+        }
+        .fabric-selection-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .fabric-selection-title {
+            color: #dec17b;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+        .fabric-selection-desc {
+            color: #444;
+            font-size: 1.13rem;
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .fabric-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+        .fabric-gallery img {
+            width: 170px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(222, 193, 123, 0.10);
+            border: 2px solid #f8f6f2;
+            background: #f8f6f2;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .fabric-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 24px rgba(222, 193, 123, 0.18);
+            border-color: #dec17b;
+        }
+        @media (max-width: 900px) {
+            .fabric-gallery {
+                gap: 14px;
+            }
+            .fabric-gallery img {
+                width: 120px;
+                height: 80px;
+            }
+        }
+        .customer-types-section {
+            background: #f8f6f2;
+            padding: 60px 0 40px 0;
+            text-align: center;
+        }
+        .customer-types-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .customer-types-title {
+            color: #dec17b;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+        .customer-types-desc {
+            color: #444;
+            font-size: 1.13rem;
+            margin-bottom: 36px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .customer-types-list {
+            display: flex;
+            justify-content: center;
+            gap: 36px;
+            flex-wrap: wrap;
+        }
+        .customer-type-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(222, 193, 123, 0.07);
+            padding: 36px 28px 32px 28px;
+            max-width: 320px;
+            min-width: 220px;
+            flex: 1 1 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .customer-type-card:hover {
+            box-shadow: 0 8px 32px rgba(222, 193, 123, 0.18);
+            transform: translateY(-6px) scale(1.025);
+        }
+        .customer-type-icon {
+            font-size: 2.5rem;
+            margin-bottom: 14px;
+            color: #dec17b;
+            display: block;
+        }
+        .customer-type-card h3 {
+            color: #dec17b;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .customer-type-card p {
+            color: #444;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        @media (max-width: 900px) {
+            .customer-types-list {
+                flex-direction: column;
+                gap: 22px;
+            }
+            .customer-type-card {
+                max-width: 95vw;
+            }
+        }
+    
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            background: #25d366;
+            border-radius: 50%;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: box-shadow 0.2s;
+        }
+        .whatsapp-float:hover {
+            box-shadow: 0 8px 32px rgba(34, 139, 34, 0.18);
+            background: #1ebea5;
+        }
+        .whatsapp-float img {
+            width: 38px;
+            height: 38px;
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .whatsapp-float {
+                bottom: 16px;
+                right: 16px;
+                padding: 7px;
+            }
+            .whatsapp-float img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .announcement-bar {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .announcement-bar a {
+            color: #dec17b;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .announcement-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .announcement-bar span {
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .announcement-bar {
+                font-size: 0.8rem;
+                padding: 8px 0;
+            }
+        }
+        </style>
+    </style>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <span>
+            Looking for custom cushions &amp; premium fabrics? Visit our sister site 
+            <a href="https://www.ckhomeandfurniture.co.uk" target="_blank" rel="noopener">ckhomeandfurniture.co.uk</a>
+        </span>
+    </div>
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png" alt="CK Upholstery Logo" class="logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html">Products & Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="services-hero">
+        <div class="services-hero-content">
+            <h1 class="services-hero-title">Our Products &amp; Services</h1>
+            <span class="services-hero-underline"></span>
+        </div>
+    </section>
+
+    <section class="services-list-section">
+        <div class="services-list-container">
+            <div class="service-card">
+                <div class="service-img-wrap">
+                    <img src="https://ckupholstery.co.uk/wp-content/uploads/2021/09/dining-restore-2-250x250.jpg" alt="Re-Upholstery & Restoration">
+                </div>
+                <div class="service-content">
+                    <h2 class="service-title">Re-Upholstery & Restoration</h2>
+                    <p>
+                        Give your cherished furniture a new lease of life. We expertly re-upholster sofas, chairs, and all types of furniture, using premium fabrics and materials. From minor repairs to complete restorations, we’ll make your old favourites look and feel brand new.
+                    </p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-img-wrap">
+                    <img 
+                        src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        srcset="
+                            https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=150 150w,
+                            https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=300 300w,
+                            https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
+                            https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600 600w,
+                            https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800 800w,
+                            https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w,
+                            https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w
+                        "
+                        sizes="(max-width: 600px) 100vw, 600px"
+                        alt="Bespoke Furniture"
+                        style="width:100%;height:100%;object-fit:cover;display:block;"
+                    >
+                </div>
+                <div class="service-content">
+                    <h2 class="service-title">Bespoke Furniture</h2>
+                    <p>
+                        Looking for something unique? We design and craft bespoke furniture tailored to your style and space. From concept to creation, our team brings your vision to life with quality craftsmanship and attention to detail.
+                    </p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-img-wrap">
+                    <img 
+                        src="https://images.pexels.com/photos/1090092/pexels-photo-1090092.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        srcset="
+                            https://images.pexels.com/photos/1090092/pexels-photo-1090092.jpeg?auto=compress&cs=tinysrgb&w=150 150w,
+                            https://images.pexels.com/photos/1090092/pexels-photo-1090092.jpeg?auto=compress&cs=tinysrgb&w=300 300w,
+                            https://images.pexels.com/photos/1090092/pexels-photo-1090092.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
+                            https://images.pexels.com/photos/1090092/pexels-photo-1090092.jpeg?auto=compress&cs=tinysrgb&w=600 600w,
+                            https://images.pexels.com/photos/1090092/pexels-photo-1090092.jpeg?auto=compress&cs=tinysrgb&w=800 800w,
+                            https://images.pexels.com/photos/1090092/pexels-photo-1090092.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w,
+                            https://images.pexels.com/photos/1090092/pexels-photo-1090092.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w
+                        "
+                        sizes="(max-width: 600px) 100vw, 600px"
+                        alt="Vintage Furniture Revival"
+                        style="width:100%;height:100%;object-fit:cover;display:block;"
+                    >
+                </div>
+                <div class="service-content">
+                    <h2 class="service-title">Vintage Furniture Revival</h2>
+                    <p>
+                        Restore the charm of your vintage and antique pieces. Our specialists carefully repair, refinish, and re-upholster vintage furniture, preserving its character while ensuring comfort and durability for years to come.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="services-btn-wrap">
+            <a href="contact.html" class="services-contact-btn">Get a Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Customer Types Section -->
+    <section class="customer-types-section">
+        <div class="customer-types-container">
+            <h2 class="customer-types-title">Who We Work With</h2>
+            <p class="customer-types-desc">
+                CK Upholstery proudly serves a diverse range of clients, delivering exceptional results for every project, no matter the scale or setting.
+            </p>
+            <div class="customer-types-list">
+                <div class="customer-type-card">
+                    <span class="customer-type-icon">🏠</span>
+                    <h3>Residential</h3>
+                    <p>Transforming homes with bespoke upholstery, restoration, and custom furniture for living rooms, bedrooms, and more.</p>
+                </div>
+                <div class="customer-type-card">
+                    <span class="customer-type-icon">🏢</span>
+                    <h3>Commercial</h3>
+                    <p>Working with offices, retail spaces, and businesses to create stylish, durable, and functional environments.</p>
+                </div>
+                <div class="customer-type-card">
+                    <span class="customer-type-icon">🏨</span>
+                    <h3>Hospitality</h3>
+                    <p>Enhancing hotels, restaurants, and leisure venues with high-quality upholstery and tailored solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fabric Selection Section -->
+    <section class="fabric-selection-section">
+        <div class="fabric-selection-container">
+            <h2 class="fabric-selection-title">A Massive Range of Fabric Selections</h2>
+            <p class="fabric-selection-desc">
+                We offer an extensive collection of high-quality fabrics to suit every taste and project. Whether you’re looking for classic textures, bold patterns, or modern colours, our curated range ensures you’ll find the perfect match for your furniture. Our team will guide you through the selection process, helping you choose the ideal fabric for durability, comfort, and style.
+            </p>
+            <div class="fabric-gallery">
+                <!-- 3 fabric images from the home page fabric section -->
+                <img 
+                    src="https://covertex-website.transforms.svdcdn.com/production/images/Maximo-Image.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1685453312&s=c34d5f17ea580f56f9f661017a9bb130"
+                    srcset="
+                        https://covertex-website.transforms.svdcdn.com/production/images/Maximo-Image.jpg?w=300&h=370&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1685453312&s=5706e450dab0ca1896e583f79fb06882 300w,
+                        https://covertex-website.transforms.svdcdn.com/production/images/Maximo-Image.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1685453312&s=c34d5f17ea580f56f9f661017a9bb130 600w
+                    "
+                    sizes="(max-width: 600px) 100vw, 170px"
+                    alt="Maximo Fabric"
+                    style="width:170px;height:120px;object-fit:cover;display:block;"
+                >
+                <img 
+                    src="https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/uffizzi/Uffizi-min-new.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1742473856&s=1929ccc5dc062d000df06694e699f17e"
+                    srcset="
+                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/uffizzi/Uffizi-min-new.jpg?w=300&h=370&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1742473856&s=94567aed7477f9144dadeaca9acc137a 300w,
+                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/uffizzi/Uffizi-min-new.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1742473856&s=1929ccc5dc062d000df06694e699f17e 600w
+                    "
+                    sizes="(max-width: 600px) 100vw, 170px"
+                    alt="Uffizi Fabric"
+                    style="width:170px;height:120px;object-fit:cover;display:block;"
+                >
+                <img 
+                    src="https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/dolce/DOLCE-1.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1674214947&s=5734b6ff80a808049ceb6486a85964e2"
+                    srcset="
+                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/dolce/DOLCE-1.jpg?w=300&h=370&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1674214947&s=2e5e2e3e8e7b6e2e7e8e7e8e7e8e7e8e 300w,
+                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/dolce/DOLCE-1.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1674214947&s=5734b6ff80a808049ceb6486a85964e2 600w
+                    "
+                    sizes="(max-width: 600px) 100vw, 170px"
+                    alt="Dolce Fabric"
+                    style="width:170px;height:120px;object-fit:cover;display:block;"
+                >
+                <!-- New fabric image 1 -->
+                <img 
+                    src="https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/destino/Destino_2023-08-04-105625_vwbf-min.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1749466192&s=8b388f96dd448b69d20021e071e350f5"
+                    srcset="
+                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/destino/Destino_2023-08-04-105625_vwbf-min.jpg?w=300&h=370&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1749466192&s=e5c0c2d3b35434ecbdcbc100a7945100 300w,
+                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/destino/Destino_2023-08-04-105625_vwbf-min.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1749466192&s=8b388f96dd448b69d20021e071e350f5 600w
+                    "
+                    sizes="(max-width: 600px) 100vw, 170px"
+                    alt="Destino Fabric"
+                    style="width:170px;height:120px;object-fit:cover;display:block;"
+                >
+                <!-- New fabric image 2 -->
+                <img 
+                    src="https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/cortona/Cortona-min-min-2-min-4-min-1.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1749480235&s=9448e3e4cfcbd1d33fb20018e99d5b1d"
+                    srcset="
+                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/cortona/Cortona-min-min-2-min-4-min-1.jpg?w=300&h=370&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1749480235&s=b79fea79b66aabbe28aa74331d2957f4 300w,
+                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/cortona/Cortona-min-min-2-min-4-min-1.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1749480235&s=9448e3e4cfcbd1d33fb20018e99d5b1d 600w
+                    "
+                    sizes="(max-width: 600px) 100vw, 170px"
+                    alt="Cortona Fabric"
+                    style="width:170px;height:120px;object-fit:cover;display:block;"
+                >
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png" alt="CK Upholstery Logo">
+            </div>
+            <nav class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Products & Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><a href="mailto:sales@ckupholstery.co.uk">sales@ckupholstery.co.uk</a></p>
+                <p><a href="tel:07944715635">07944 715635</a></p>
+            </div>
+        </div>
+        <hr class="footer-separator">
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/447944715635?text=Hi%2C%20how%20can%20we%20help%3F" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+</body>
+</html>
