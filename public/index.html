@@ -508,6 +508,62 @@
             flex-direction: column;
         }
     }
+
+    /* Add to your <style> or styles.css */
+    /* Hide hamburger by default, show on mobile */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+        z-index: 1001;
+        margin-left: auto;
+    }
+    .hamburger span {
+        display: block;
+        width: 28px;
+        height: 4px;
+        margin: 4px 0;
+        background: #222;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    @media (max-width: 700px) {
+        .hamburger {
+            display: flex;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            right: -100vw;
+            width: 70vw;
+            max-width: 320px;
+            height: 100vh;
+            background: #fff;
+            box-shadow: -2px 0 16px rgba(0,0,0,0.08);
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 80px 24px 24px 24px;
+            transition: right 0.3s;
+            z-index: 1000;
+        }
+        nav.open {
+            right: 0;
+        }
+        nav a {
+            display: block;
+            margin: 18px 0;
+            font-size: 1.2rem;
+            color: #222;
+        }
+        .header-container {
+            flex-wrap: nowrap;
+        }
+    }
     </style>
 </head>
 <body>
@@ -523,6 +579,11 @@
             <a href="index.html">
                 <img src="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png" alt="CK Upholstery Logo" class="logo">
             </a>
+            <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="services.html">Products & Services</a>
@@ -822,5 +883,20 @@
     <a href="https://wa.me/447944715635?text=Hi%2C%20how%20can%20we%20help%3F" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
+
+    <!-- Add just before </body> -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.getElementById('hamburger-menu');
+        const nav = document.querySelector('header nav');
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('open');
+        });
+        // Optional: close menu when clicking a link
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => nav.classList.remove('open'));
+        });
+    });
+    </script>
 </body>
 </html>
