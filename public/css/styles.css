@@ -109,6 +109,7 @@ footer {
   cursor: pointer;
   margin-top: 1.5rem;
   transition: background 0.2s;
+  text-decoration: none; /* Remove underline from all .button links */
 }
 
 .button:hover {
@@ -171,6 +172,7 @@ footer {
   display: block;
 }
 
+/* Hero Slideshow Styles */
 .hero-slideshow {
   position: relative;
   width: 100%;
@@ -187,7 +189,8 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-size: cover;
+  background-position: center;
   opacity: 0;
   transition: opacity 0.7s;
   left: 0;
@@ -204,7 +207,7 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,0.65);
+  background: rgba(0,0,0,0.45);
   color: #fff;
   padding: 2.2rem 2.5rem 1.7rem 2.5rem;
   border-radius: 14px;
@@ -215,23 +218,29 @@ footer {
 }
 
 .hero-overlay h2 {
-  font-size: 2.1rem;
+  font-size: 2.7rem;
   font-weight: 700;
   margin: 0 0 1.1rem 0;
   line-height: 1.2;
   letter-spacing: 0.5px;
 }
 
-.hero-overlay p {
+.hero-overlay .hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+  color: #ccc;
+}
+
+.hero-overlay .hero-desc {
   font-size: 1.18rem;
   font-weight: 400;
-  margin: 0;
+  margin: 0 0 2rem 0;
   line-height: 1.5;
 }
 
 .hero-btn {
   display: inline-block;
-  margin-top: 2rem;
   background: var(--accent-gold);
   color: var(--main-black);
   font-family: var(--font-main);
@@ -244,6 +253,7 @@ footer {
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  border: 2px solid #fff;
 }
 
 .hero-btn:hover {
@@ -319,7 +329,7 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Changed from cover to contain */
   opacity: 0;
   transition: opacity 0.7s;
   left: 0;
@@ -670,77 +680,78 @@ footer {
 }
 /* Contact Form Section */
 .contact-section {
+    background: #faf8f3;
+    padding: 56px 0 40px 0;
+    border-top: 1px solid #f0e8d8;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
     background: #fff;
-    padding: 60px 0 40px 0;
-    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
 }
 
 .contact-title {
-    color: #222;
-    font-size: 2.2rem;
-    font-weight: 600;
-    margin-bottom: 32px;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #f8f6f2;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(222, 193, 123, 0.07);
-    padding: 32px 28px 24px 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.form-row {
-    display: flex;
-    gap: 18px;
-    margin-bottom: 0;
-}
-
-.form-row textarea {
-    width: 100%;
-    resize: vertical;
-}
-
-.contact-form input,
-.contact-form textarea {
-    flex: 1;
-    padding: 12px 14px;
-    border: 1.5px solid #dec17b;
-    border-radius: 6px;
-    font-size: 1rem;
-    background: #fff;
-    color: #222;
-    font-family: inherit;
-    transition: border-color 0.2s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #a89c7d;
-}
-
-.contact-submit {
-    background: #dec17b;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    padding: 14px 0;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.2s;
-    width: 100%;
+    text-align: center;
+    color: #dec17b;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
     letter-spacing: 1px;
 }
 
-.contact-submit:hover {
-    background: #a89c7d;
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.contact-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-field label {
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.contact-field input,
+.contact-field textarea {
+    padding: 0.7rem 1rem;
+    border: 1px solid #e5dec7;
+    border-radius: 7px;
+    font-size: 1rem;
+    background: #faf8f3;
+    color: #222;
+    font-family: inherit;
+    transition: border 0.2s;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+    border-color: #dec17b;
+    outline: none;
+}
+
+.contact-form .button {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+    padding: 0.8rem 2.2rem;
+    font-size: 1.1rem;
 }
 
 /* Announcement Bar Styles */
