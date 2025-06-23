@@ -380,10 +380,19 @@
         background: linear-gradient(0deg, rgba(34,34,34,0.68) 60%, rgba(34,34,34,0.12) 100%);
     }
     .fabrics-overlay-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 100%;
         display: flex;
         justify-content: center;
-        margin-bottom: 32px;
+        align-items: center;
+        z-index: 10;
+        pointer-events: none;
+        margin-bottom: 0; /* Remove any margin that could move it */
+        opacity: 1;       /* Always fully visible */
+        transition: none; /* Remove any transitions */
     }
     .fabrics-overlay-content h3 {
         margin: 0;
