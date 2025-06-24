@@ -844,9 +844,15 @@ footer {
         text-decoration: underline;
         font-size: 1rem;
     }
+    .footer-container {
+        display: none !important;
+    }
 }
 @media (min-width: 701px) {
     .footer-quick-links {
         display: none;
+    }
+    .footer-container {
+        display: flex !important;
     }
 }
