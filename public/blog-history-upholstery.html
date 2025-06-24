@@ -128,7 +128,7 @@
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact Us</a>
             </nav>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -213,5 +213,20 @@
         </div>
         <hr class="footer-separator">
     </footer>
+    
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.getElementById('hamburger-menu');
+        const nav = document.querySelector('header nav');
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('open');
+        });
+        // Optional: close menu when clicking a link
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => nav.classList.remove('open'));
+        });
+    });
+    </script>
 </body>
 </html>

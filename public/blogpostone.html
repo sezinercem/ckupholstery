@@ -161,6 +161,11 @@
             <a href="index.html">
                 <img src="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png" alt="CK Upholstery Logo" class="logo">
             </a>
+            <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="services.html">Products & Services</a>
@@ -243,5 +248,20 @@
         </div>
         <hr class="footer-separator">
     </footer>
+    
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.getElementById('hamburger-menu');
+        const nav = document.querySelector('header nav');
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('open');
+        });
+        // Optional: close menu when clicking a link
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => nav.classList.remove('open'));
+        });
+    });
+    </script>
 </body>
 </html>
