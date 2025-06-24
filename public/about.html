@@ -133,6 +133,37 @@
                 font-size: 2.2rem;
             }
         }
+        .footer-quick-links { display: none; }
+        @media (max-width: 800px) {
+            .footer-quick-links {
+                display: block;
+                background: #dec17b;
+                color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                margin: 20px 0;
+            }
+            .quick-links-title {
+                font-size: 1.2rem;
+                font-weight: 500;
+                margin-bottom: 12px;
+            }
+            .quick-links-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .quick-links-list li {
+                margin-bottom: 8px;
+            }
+            .quick-links-list a {
+                color: #fff;
+                text-decoration: none;
+            }
+            .quick-links-list a:hover {
+                text-decoration: underline;
+            }
+        }
     </style>
 </head>
 <body>
@@ -198,14 +229,14 @@
             </div>
             <nav class="footer-links">
                 <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="#">Products & Services</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact Us</a>
+                <a href="services.html">Products & Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact Us</a>
             </nav>
             <div class="footer-contact">
                 <h4>Contact Us</h4>
                 <p><a href="mailto:sales@ckupholstery.co.uk">sales@ckupholstery.co.uk</a></p>
+                <p><a href="tel:07944715635">07944 715635</a></p>
             </div>
         </div>
         <div class="footer-quick-links">
