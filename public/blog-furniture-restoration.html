@@ -50,93 +50,63 @@
       }
     }
     </script>
+    <!-- End SEO additions -->
+    
+    <!-- Hamburger Menu CSS -->
     <style>
-        .blog-post-hero {
-            background: #fff;
-            color: #dec17b;
-            padding: 48px 0 24px 0;
-            text-align: center;
-            border-top: 4px solid #dec17b;
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+        z-index: 1001;
+        margin-left: auto;
+    }
+    .hamburger span {
+        display: block;
+        width: 28px;
+        height: 4px;
+        margin: 4px 0;
+        background: #dec17b;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    @media (max-width: 700px) {
+        .hamburger {
+            display: flex;
         }
-        .blog-post-hero img {
+        nav {
+            position: fixed;
+            top: 0;
+            right: -100vw;
+            width: 70vw;
             max-width: 320px;
-            width: 100%;
-            margin: 0 auto 24px auto;
-            display: block;
-            border-radius: 8px;
-        }
-        .blog-post-content {
-            max-width: 700px;
-            margin: 32px auto;
+            height: 100vh;
             background: #fff;
-            color: #222;
-            padding: 32px 24px;
-            border-radius: 8px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-            font-size: 1.08rem;
-            line-height: 1.7;
+            box-shadow: -2px 0 16px rgba(0,0,0,0.08);
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 80px 24px 24px 24px;
+            transition: right 0.3s;
+            z-index: 1000;
         }
-        .blog-post-content h1 {
-            color: #dec17b;
-            font-size: 2.2rem;
-            margin-bottom: 12px;
+        nav.open {
+            right: 0;
         }
-        .blog-post-meta {
-            color: #000;
-            font-size: 0.95rem;
-            margin-bottom: 24px;
+        nav a {
+            display: block;
+            margin: 18px 0;
+            font-size: 1.2rem;
+            color: #d1a76b;
         }
-        @media (max-width: 700px) {
-            .blog-post-content { padding: 18px 6vw; }
-            .blog-post-hero { padding: 28px 0 12px 0; }
+        .header-container {
+            flex-wrap: nowrap;
         }
-        .announcement-bar {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-        .announcement-bar a {
-            color: #dec17b;
-            font-weight: 500;
-            text-decoration: none;
-        }
-        .announcement-bar a:hover {
-            text-decoration: underline;
-        }
-        .footer-quick-links {
-            display: none;
-        }
-        @media (max-width: 700px) {
-            .footer-quick-links {
-                display: block;
-                background: #dec17b;
-                color: #fff;
-                padding: 16px;
-                border-radius: 8px;
-                margin: 16px 0;
-            }
-            .footer-quick-links .quick-links-title {
-                font-weight: 700;
-                margin-bottom: 12px;
-            }
-            .footer-quick-links .quick-links-list {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-            .footer-quick-links .quick-links-list li {
-                margin-bottom: 8px;
-            }
-            .footer-quick-links .quick-links-list a {
-                color: #fff;
-                text-decoration: none;
-            }
-            .footer-quick-links .quick-links-list a:hover {
-                text-decoration: underline;
-            }
-        }
+    }
     </style>
 </head>
 <body>
@@ -152,6 +122,11 @@
             <a href="index.html">
                 <img src="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png" alt="CK Upholstery Logo" class="logo">
             </a>
+            <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="services.html">Products & Services</a>
