@@ -819,36 +819,51 @@ footer {
     .contact-form {
         padding: 22px 8px 16px 8px;
     }
-    /* Footer Quick Links (Mobile Only) */
+    .footer-container {
+        display: none !important;
+    }
+}
+
+/* Footer Quick Links - Matches blog.html exactly */
+.footer-quick-links {
+    display: none;
+}
+
+@media (max-width: 800px) {
     .footer-quick-links {
         display: block;
-        text-align: center;
-        margin: 1.5rem 0 0 0;
+        background: #dec17b;
+        color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
     }
     .quick-links-title {
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-        color: #dec17b;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 12px;
     }
     .quick-links-list {
         list-style: none;
         padding: 0;
-        margin: 0 0 0.5rem 0;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
+        margin: 0;
+    }
+    .quick-links-list li {
+        margin-bottom: 8px;
     }
     .quick-links-list a {
-        color: #dec17b;
+        color: #fff;
+        text-decoration: none;
+    }
+    .quick-links-list a:hover {
         text-decoration: underline;
-        font-size: 1rem;
     }
     .footer-container {
         display: none !important;
     }
 }
-@media (min-width: 701px) {
+
+@media (min-width: 801px) {
     .footer-quick-links {
         display: none;
     }
