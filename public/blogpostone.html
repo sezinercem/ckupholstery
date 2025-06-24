@@ -60,6 +60,38 @@
         .announcement-bar a:hover {
             text-decoration: underline;
         }
+        .footer-quick-links {
+            display: none;
+        }
+        @media (max-width: 700px) {
+            .footer-quick-links {
+                display: block;
+                background: #dec17b;
+                color: #222;
+                padding: 16px;
+                border-radius: 8px;
+                margin: 16px 0;
+            }
+            .quick-links-title {
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+            .quick-links-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .quick-links-list li {
+                margin-bottom: 8px;
+            }
+            .quick-links-list a {
+                color: #222;
+                text-decoration: none;
+            }
+            .quick-links-list a:hover {
+                text-decoration: underline;
+            }
+        }
     </style>
 </head>
 <body>
@@ -128,6 +160,15 @@
         <p>
             And, it is in this situation that Murat Yilmaz had started working on Yachts, Boats, Hotels and private homes from the age of 14. It is from his sheer dedication and hard work that CK Upholstery was born and is now considered a standard among Upholsterers.
         </p>
+    </div>
+    <div class="footer-quick-links">
+        <div class="quick-links-title">Quick Links</div>
+        <ul class="quick-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Products & Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
     </div>
     <footer class="site-footer">
         <div class="footer-container">

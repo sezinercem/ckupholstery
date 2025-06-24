@@ -819,4 +819,34 @@ footer {
     .contact-form {
         padding: 22px 8px 16px 8px;
     }
+    /* Footer Quick Links (Mobile Only) */
+    .footer-quick-links {
+        display: block;
+        text-align: center;
+        margin: 1.5rem 0 0 0;
+    }
+    .quick-links-title {
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #dec17b;
+        font-size: 1.1rem;
+    }
+    .quick-links-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 0.5rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .quick-links-list a {
+        color: #dec17b;
+        text-decoration: underline;
+        font-size: 1rem;
+    }
+}
+@media (min-width: 701px) {
+    .footer-quick-links {
+        display: none;
+    }
 }
