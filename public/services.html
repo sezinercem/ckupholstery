@@ -60,350 +60,63 @@
     }
     </script>
     <!-- End SEO additions -->
-    <style>
-        .services-hero {
-            position: relative;
-            width: 100vw;
-            left: 50%;
-            right: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
-            min-height: 220px;
-            background: url('https://ckupholstery.co.uk/wp-content/uploads/2021/04/sofa-bg.jpg') center center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-        .services-hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(34, 34, 34, 0.65);
-            z-index: 1;
-        }
-        .services-hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            width: 100%;
-        }
-        .services-hero-title {
-            color: #dec17b;
-            font-size: 2.7rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            margin-bottom: 18px;
-            font-family: inherit;
-        }
-        .services-hero-underline {
-            display: block;
-            width: 200px;
-            height: 4px;
-            background: #dec17b;
-            margin: 0 auto;
-            border-radius: 2px;
-        }
-        @media (max-width: 700px) {
-            .services-hero-title {
-                font-size: 1.5rem;
-            }
-            .services-hero-underline {
-                width: 120px;
-                height: 3px;
-            }
-            .services-hero {
-                min-height: 120px;
-            }
-        }
-        .services-list-section {
-            background: #f8f6f2;
-            padding: 60px 0 40px 0;
-        }
-        .services-list-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            max-width: 1400px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-        }
-        .service-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 24px rgba(222, 193, 123, 0.07);
-            overflow: hidden;
-            max-width: 370px;
-            min-width: 300px;
-            flex: 1 1 320px;
-            display: flex;
-            flex-direction: column;
-            transition: box-shadow 0.2s, transform 0.2s;
-        }
-        .service-card:hover {
-            box-shadow: 0 8px 32px rgba(222, 193, 123, 0.18);
-            transform: translateY(-6px) scale(1.025);
-        }
-        .service-img-wrap {
-            width: 100%;
-            height: 210px;
-            overflow: hidden;
-            background: #dec17b;
-        }
-        .service-img-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s;
-        }
-        .service-card:hover .service-img-wrap img {
-            transform: scale(1.07);
-        }
-        .service-content {
-            padding: 28px 24px 32px 24px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-        .service-title {
-            color: #dec17b;
-            font-size: 1.35rem;
-            font-weight: 600;
-            margin-bottom: 14px;
-            letter-spacing: 0.5px;
-        }
-        .service-content p {
-            color: #444;
-            font-size: 1.07rem;
-            line-height: 1.7;
-        }
-        .services-btn-wrap {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .services-contact-btn {
-            background: #dec17b;
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            padding: 16px 38px;
-            font-size: 1.15rem;
-            font-weight: 600;
-            text-decoration: none;
-            letter-spacing: 1px;
-            box-shadow: 0 2px 8px rgba(222, 193, 123, 0.13);
-            transition: background 0.2s, box-shadow 0.2s;
-            display: inline-block;
-        }
-        .services-contact-btn:hover {
-            background: #a89c7d;
-            box-shadow: 0 4px 18px rgba(222, 193, 123, 0.22);
-        }
-        @media (max-width: 1100px) {
-            .services-list-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 32px;
-            }
-            .service-card {
-                max-width: 95vw;
-            }
-        }
-        .fabric-selection-section {
-            background: #fff;
-            padding: 60px 0 40px 0;
-            text-align: center;
-        }
-        .fabric-selection-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        .fabric-selection-title {
-            color: #dec17b;
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 18px;
-            letter-spacing: 1px;
-        }
-        .fabric-selection-desc {
-            color: #444;
-            font-size: 1.13rem;
-            margin-bottom: 32px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .fabric-gallery {
-            display: flex;
-            justify-content: center;
-            gap: 22px;
-            flex-wrap: wrap;
-        }
-        .fabric-gallery img {
-            width: 170px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 2px 12px rgba(222, 193, 123, 0.10);
-            border: 2px solid #f8f6f2;
-            background: #f8f6f2;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .fabric-gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 24px rgba(222, 193, 123, 0.18);
-            border-color: #dec17b;
-        }
-        @media (max-width: 900px) {
-            .fabric-gallery {
-                gap: 14px;
-            }
-            .fabric-gallery img {
-                width: 120px;
-                height: 80px;
-            }
-        }
-        .customer-types-section {
-            background: #f8f6f2;
-            padding: 60px 0 40px 0;
-            text-align: center;
-        }
-        .customer-types-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        .customer-types-title {
-            color: #dec17b;
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 18px;
-            letter-spacing: 1px;
-        }
-        .customer-types-desc {
-            color: #444;
-            font-size: 1.13rem;
-            margin-bottom: 36px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .customer-types-list {
-            display: flex;
-            justify-content: center;
-            gap: 36px;
-            flex-wrap: wrap;
-        }
-        .customer-type-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 24px rgba(222, 193, 123, 0.07);
-            padding: 36px 28px 32px 28px;
-            max-width: 320px;
-            min-width: 220px;
-            flex: 1 1 260px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: box-shadow 0.2s, transform 0.2s;
-        }
-        .customer-type-card:hover {
-            box-shadow: 0 8px 32px rgba(222, 193, 123, 0.18);
-            transform: translateY(-6px) scale(1.025);
-        }
-        .customer-type-icon {
-            font-size: 2.5rem;
-            margin-bottom: 14px;
-            color: #dec17b;
-            display: block;
-        }
-        .customer-type-card h3 {
-            color: #dec17b;
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        .customer-type-card p {
-            color: #444;
-            font-size: 1.05rem;
-            line-height: 1.6;
-        }
-        @media (max-width: 900px) {
-            .customer-types-list {
-                flex-direction: column;
-                gap: 22px;
-            }
-            .customer-type-card {
-                max-width: 95vw;
-            }
-        }
     
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 9999;
-            background: #25d366;
-            border-radius: 50%;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-            padding: 10px;
+    <!-- Hamburger Menu CSS -->
+    <style>
+    /* Hide hamburger by default, show on mobile */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+        z-index: 1001;
+        margin-left: auto;
+    }
+    .hamburger span {
+        display: block;
+        width: 28px;
+        height: 4px;
+        margin: 4px 0;
+        background: #dec17b; /* Gold color */
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    @media (max-width: 700px) {
+        .hamburger {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: box-shadow 0.2s;
         }
-        .whatsapp-float:hover {
-            box-shadow: 0 8px 32px rgba(34, 139, 34, 0.18);
-            background: #1ebea5;
+        nav {
+            position: fixed;
+            top: 0;
+            right: -100vw;
+            width: 70vw;
+            max-width: 320px;
+            height: 100vh;
+            background: #fff;
+            box-shadow: -2px 0 16px rgba(0,0,0,0.08);
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 80px 24px 24px 24px;
+            transition: right 0.3s;
+            z-index: 1000;
         }
-        .whatsapp-float img {
-            width: 38px;
-            height: 38px;
+        nav.open {
+            right: 0;
+        }
+        nav a {
             display: block;
+            margin: 18px 0;
+            font-size: 1.2rem;
+            color: #d1a76b;
         }
-        @media (max-width: 600px) {
-            .whatsapp-float {
-                bottom: 16px;
-                right: 16px;
-                padding: 7px;
-            }
-            .whatsapp-float img {
-                width: 30px;
-                height: 30px;
-            }
+        .header-container {
+            flex-wrap: nowrap;
         }
-        .announcement-bar {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        .announcement-bar a {
-            color: #dec17b;
-            font-weight: 500;
-            text-decoration: none;
-        }
-
-        .announcement-bar a:hover {
-            text-decoration: underline;
-        }
-
-        .announcement-bar span {
-            display: inline-block;
-            margin-right: 8px;
-        }
-
-        @media (max-width: 600px) {
-            .announcement-bar {
-                font-size: 0.8rem;
-                padding: 8px 0;
-            }
-        }
+    }
     </style>
 </head>
 <body>
@@ -419,12 +132,19 @@
             <a href="index.html">
                 <img src="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png" alt="CK Upholstery Logo" class="logo">
             </a>
+            <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="services.html">Products & Services</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact Us</a>
             </nav>
+        </div>
+    </header>
         </div>
     </header>
 
@@ -629,5 +349,20 @@
     <a href="https://wa.me/447944715635?text=Hi%2C%20how%20can%20we%20help%3F" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
+    
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.getElementById('hamburger-menu');
+        const nav = document.querySelector('header nav');
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('open');
+        });
+        // Optional: close menu when clicking a link
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => nav.classList.remove('open'));
+        });
+    });
+    </script>
 </body>
 </html>
