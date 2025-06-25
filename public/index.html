@@ -605,13 +605,18 @@
 
     @media (max-width: 700px) {
         .features,
-        .hero-slideshow,
         .about-section,
         .fabrics-slideshow-section,
         .blog-preview-section,
         .contact-section {
             padding-left: 16px;
             padding-right: 16px;
+        }
+        
+        /* Explicitly remove padding from hero */
+        .hero-slideshow {
+            padding-left: 0;
+            padding-right: 0;
         }
         
         /* Also ensure inner containers don't add extra padding */
