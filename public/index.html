@@ -233,7 +233,12 @@
             max-width: 98vw;
         }
         .blog-card-image {
-            height: 140px;
+            height: 200px; /* Increased from 140px to make images more visible */
+        }
+    }
+    @media (max-width: 600px) {
+        .blog-card-image {
+            height: 180px; /* Slightly smaller for very small screens */
         }
     }
 
