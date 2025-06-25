@@ -602,6 +602,30 @@
             padding: 8px 18px;
         }
     }
+
+    @media (max-width: 700px) {
+        .features,
+        .hero-slideshow,
+        .about-section,
+        .fabrics-slideshow-section,
+        .blog-preview-section,
+        .contact-section {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        
+        /* Also ensure inner containers don't add extra padding */
+        .about-container,
+        .blog-cards-container,
+        .contact-container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        .fabrics-slideshow {
+            width: calc(100% - 32px); /* Account for the 16px padding on each side */
+        }
+    }
     </style>
 </head>
 <body>
