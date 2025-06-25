@@ -824,6 +824,16 @@ footer {
     }
 }
 
+/* Contact Section Mobile Styles - add this to your existing contact section styles */
+@media (max-width: 700px) {
+    .contact-container {
+        min-width: 0; /* Allow it to shrink on small screens */
+        padding: 0 8px;
+        width: calc(100vw - 16px); /* Make it 50px+ wider on mobile */
+        max-width: calc(100vw - 16px);
+    }
+}
+
 /* Footer Quick Links - Matches blog.html exactly */
 .footer-quick-links {
     display: none;
