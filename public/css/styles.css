@@ -242,7 +242,7 @@ footer {
 .hero-btn {
   display: inline-block;
   background: var(--accent-gold);
-  color: var(--main-black);
+  color: var(--main-black) !important;
   font-family: var(--font-main);
   font-weight: 700;
   font-size: 1.08rem;
@@ -279,6 +279,18 @@ footer {
   letter-spacing: 1px;
 }
 
+/* Services List Container - 3 cards in a row, left aligned */
+.services-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start; /* Left align the cards */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
 .services-list {
   display: flex;
   flex-wrap: wrap;
@@ -292,8 +304,8 @@ footer {
   box-shadow: 0 1px 8px 0 rgba(0,0,0,0.04);
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   flex: 1 1 300px;
-  max-width: 340px;
-  min-width: 260px;
+  max-width: 380px;
+  min-width: 300px;
   text-align: left;
   border-left: 5px solid var(--accent-gold);
 }
@@ -311,6 +323,405 @@ footer {
   font-size: 1.05rem;
   margin: 0;
   line-height: 1.6;
+}
+
+/* Services List Section Styling */
+.services-list-section {
+  padding: 3rem 0;
+  background: #fff;
+}
+
+/* Responsive Design for Service Cards */
+@media (max-width: 1200px) {
+  .services-list-container {
+    justify-content: center; /* Center cards when they wrap */
+  }
+}
+
+@media (max-width: 900px) {
+  .services-list-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  
+  .service-card {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-list-container {
+    padding: 0 1rem;
+  }
+  
+  .service-card {
+    min-width: 280px;
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Services Button Styling */
+.services-btn-wrap {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.services-contact-btn {
+  display: inline-block;
+  background: var(--accent-gold);
+  color: var(--main-black) !important;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 1.08rem;
+  padding: 0.85rem 2.2rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  border: 2px solid #fff;
+}
+
+.services-contact-btn:hover {
+  background: var(--accent-brown);
+  color: var(--text-white);
+}
+
+/* Customer Types Section */
+.customer-types-section {
+  padding: 4rem 0;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.customer-types-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.customer-types-title {
+  color: var(--accent-brown);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.customer-types-desc {
+  color: var(--accent-grey);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.customer-types-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.customer-type-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  text-align: center;
+  flex: 1 1 280px;
+  max-width: 350px;
+  border-top: 4px solid var(--accent-gold);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.customer-type-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.customer-type-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.customer-type-card h3 {
+  color: var(--accent-brown);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.customer-type-card p {
+  color: var(--accent-grey);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Fabric Selection Section */
+.fabric-selection-section {
+  padding: 4rem 0;
+  background: #fff;
+  text-align: center;
+}
+
+.fabric-selection-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.fabric-selection-title {
+  color: var(--accent-brown);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.fabric-selection-desc {
+  color: var(--accent-grey);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.fabric-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.fabric-gallery img {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.fabric-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* Responsive Design for Customer Types and Fabric Gallery */
+@media (max-width: 900px) {
+  .customer-types-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .customer-type-card {
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .fabric-gallery {
+    gap: 8px;
+  }
+  
+  .fabric-gallery img {
+    width: 140px !important;
+    height: 100px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .customer-types-title,
+  .fabric-selection-title {
+    font-size: 2rem;
+  }
+  
+  .customer-types-desc,
+  .fabric-selection-desc {
+    font-size: 1.1rem;
+  }
+  
+  .customer-type-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .fabric-gallery img {
+    width: 120px !important;
+    height: 85px !important;
+  }
+}
+
+/* Blog Post Styling */
+.blog-post-hero {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  color: white;
+  overflow: hidden;
+}
+
+.blog-post-hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.blog-post-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.blog-post-meta {
+  font-size: 1rem;
+  color: #dec17b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.blog-post-content {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: var(--accent-grey);
+}
+
+.blog-post-content p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.blog-post-content a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.blog-post-content a:hover {
+  color: var(--accent-brown);
+  text-decoration: underline;
+}
+
+/* Blog Post Responsive Design */
+@media (max-width: 700px) {
+  .blog-post-hero {
+    min-height: 250px;
+  }
+  
+  .blog-post-hero h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .blog-post-meta {
+    font-size: 0.9rem;
+  }
+  
+  .blog-post-content {
+    padding: 0 16px; /* 16px mobile padding */
+    font-size: 1rem;
+  }
+}
+
+/* Mobile 16px Padding for All Content */
+@media (max-width: 700px) {
+  /* Header container */
+  .header-container {
+    padding: 0 16px;
+  }
+  
+  /* Services sections */
+  .services-list-container {
+    padding: 0 16px;
+  }
+  
+  .services-btn-wrap {
+    padding: 0 16px;
+  }
+  
+  /* Customer types section */
+  .customer-types-container {
+    padding: 0 16px;
+  }
+  
+  /* Fabric selection section */
+  .fabric-selection-container {
+    padding: 0 16px;
+  }
+  
+  /* Footer */
+  .footer-container {
+    padding: 0 16px;
+  }
+  
+  .footer-quick-links {
+    padding: 0 16px;
+  }
+  
+  /* Blog content */
+  .blog-hero-content {
+    padding: 0 16px;
+  }
+  
+  /* About page content */
+  .about-content,
+  .about-content-container {
+    padding: 0 16px;
+  }
+  
+  /* Contact page content */
+  .contact-container,
+  .contact-form-container {
+    padding: 0 16px;
+  }
+  
+  /* General section containers */
+  .section-container,
+  .hero-content,
+  .main-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .fabric-slideshow {
@@ -756,31 +1167,28 @@ footer {
 
 /* Announcement Bar Styles */
 .announcement-bar {
-    width: 100%;
-    background: #dec17b;
-    color: #222;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
-    font-size: 1rem;
-    padding: 7px 0 6px 0;
-    letter-spacing: 0.02em;
-    font-family: inherit;
-    border-bottom: 1px solid #e7d7a7;
-    z-index: 10000;
-    position: relative;
+    font-size: 0.9rem;
 }
 .announcement-bar a {
-    color: #222;
-    text-decoration: underline;
+    color: #dec17b;
     font-weight: 500;
-    transition: color 0.2s;
+    text-decoration: none;
 }
 .announcement-bar a:hover {
-    color: #a88c3d;
+    text-decoration: underline;
+}
+.announcement-bar span {
+    display: inline-block;
+    margin-right: 8px;
 }
 @media (max-width: 600px) {
     .announcement-bar {
-        font-size: 0.92rem;
-        padding: 6px 8px 5px 8px;
+        font-size: 0.8rem;
+        padding: 8px 0;
     }
 }
 @media (max-width: 900px) {
@@ -879,5 +1287,115 @@ footer {
     }
     .footer-container {
         display: flex !important;
+    }
+}
+
+/* COMPREHENSIVE MOBILE FIXES - 700px and below */
+@media (max-width: 700px) {
+    /* Services Page Mobile Fixes - Center everything */
+    .services-list-container {
+        justify-content: center !important;
+        text-align: center;
+        padding: 0 16px;
+    }
+    
+    .service-card {
+        margin: 0 auto 2rem auto;
+        max-width: calc(100vw - 32px);
+        width: 100%;
+    }
+    
+    .services-btn-wrap {
+        text-align: center;
+        padding: 0 16px;
+    }
+    
+    .customer-types-container {
+        text-align: center;
+        padding: 0 16px;
+    }
+    
+    .fabric-selection-container {
+        text-align: center;
+        padding: 0 16px;
+    }
+    
+    /* Image Size Fixes for Mobile */
+    .service-card img,
+    .fabric-gallery img {
+        max-width: 100% !important;
+        height: auto !important;
+        width: 100% !important;
+    }
+    
+    .fabric-gallery img {
+        width: calc(50% - 5px) !important;
+        height: 80px !important;
+        object-fit: cover;
+    }
+    
+    .blog-post-hero img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+    
+    /* Contact Page Mobile Fixes */
+    .contact-container {
+        min-width: 0 !important;
+        width: calc(100vw - 32px) !important;
+        max-width: calc(100vw - 32px) !important;
+        padding: 0 16px !important;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
+    .contact-form {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 16px !important;
+        box-sizing: border-box;
+        margin: 0;
+    }
+    
+    .form-group {
+        width: 100% !important;
+        margin-bottom: 16px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    /* General Mobile Container Fixes */
+    .hero-content,
+    .main-content,
+    .section-container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        max-width: calc(100vw - 32px);
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
+    /* Header Mobile Fixes */
+    .header-container {
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+    
+    /* Blog Content Mobile Fixes */
+    .blog-post-content {
+        padding: 0 16px !important;
+        max-width: calc(100vw - 32px);
+        margin: 3rem auto;
+        box-sizing: border-box;
+    }
+    
+    /* Footer Mobile Fixes */
+    .footer-container {
+        padding: 0 16px !important;
+        box-sizing: border-box;
     }
 }

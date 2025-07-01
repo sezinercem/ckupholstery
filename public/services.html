@@ -180,6 +180,57 @@
             height: 30px;
         }
     }
+
+    /* Services Hero Section */
+    .services-hero {
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        min-height: 180px;
+        background: #757575;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-top: 4px solid #dec17b;
+    }
+    .services-hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        width: 100%;
+    }
+    .services-hero-title {
+        color: #dec17b;
+        font-size: 2.7rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: 18px;
+        font-family: inherit;
+    }
+    .services-hero-underline {
+        display: block;
+        width: 200px;
+        height: 6px;
+        background: #dec17b;
+        margin: 0 auto;
+        border-radius: 2px;
+    }
+    @media (max-width: 700px) {
+        .services-hero-title {
+            font-size: 1.5rem;
+        }
+        .services-hero-underline {
+            width: 120px;
+            height: 3px;
+        }
+        .services-hero {
+            min-height: 100px;
+        }
+    }
     </style>
 </head>
 <body>

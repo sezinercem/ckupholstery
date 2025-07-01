@@ -107,6 +107,33 @@
             flex-wrap: nowrap;
         }
     }
+    
+    /* Announcement Bar Styles */
+    .announcement-bar {
+        background: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    .announcement-bar a {
+        color: #dec17b;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    .announcement-bar a:hover {
+        text-decoration: underline;
+    }
+    .announcement-bar span {
+        display: inline-block;
+        margin-right: 8px;
+    }
+    @media (max-width: 600px) {
+        .announcement-bar {
+            font-size: 0.8rem;
+            padding: 8px 16px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -122,17 +149,17 @@
             <a href="index.html">
                 <img src="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png" alt="CK Upholstery Logo" class="logo">
             </a>
+            <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="services.html">Products & Services</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact Us</a>
             </nav>
-            <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </header>
     <section class="blog-post-hero">

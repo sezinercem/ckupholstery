@@ -107,6 +107,33 @@
             flex-wrap: nowrap;
         }
     }
+    
+    /* Announcement Bar Styles */
+    .announcement-bar {
+        background: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    .announcement-bar a {
+        color: #dec17b;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    .announcement-bar a:hover {
+        text-decoration: underline;
+    }
+    .announcement-bar span {
+        display: inline-block;
+        margin-right: 8px;
+    }
+    @media (max-width: 600px) {
+        .announcement-bar {
+            font-size: 0.8rem;
+            padding: 8px 16px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -133,11 +160,6 @@
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact Us</a>
             </nav>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </header>
     <section class="blog-post-hero">
