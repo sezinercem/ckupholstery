@@ -1292,32 +1292,45 @@ footer {
 
 /* COMPREHENSIVE MOBILE FIXES - 700px and below */
 @media (max-width: 700px) {
-    /* Services Page Mobile Fixes - Center everything */
+    /* Services Page Mobile Fixes - Smaller, centered containers */
     .services-list-container {
         justify-content: center !important;
         text-align: center;
-        padding: 0 16px;
+        padding: 0 24px;
+        max-width: calc(100vw - 48px);
+        width: 90%;
+        margin: 0 auto;
     }
     
     .service-card {
         margin: 0 auto 2rem auto;
-        max-width: calc(100vw - 32px);
+        max-width: 320px;
         width: 100%;
     }
     
     .services-btn-wrap {
         text-align: center;
-        padding: 0 16px;
+        padding: 0 24px;
+        max-width: calc(100vw - 48px);
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .customer-types-container {
         text-align: center;
-        padding: 0 16px;
+        padding: 0 24px;
+        max-width: calc(100vw - 48px);
+        width: 90%;
+        margin: 0 auto;
     }
     
     .fabric-selection-container {
         text-align: center;
-        padding: 0 16px;
+        padding: 0 24px;
+        max-width: calc(100vw - 48px);
+        width: 90%;
+        margin: 0 auto;
     }
     
     /* Image Size Fixes for Mobile */
@@ -1340,12 +1353,12 @@ footer {
         object-fit: cover;
     }
     
-    /* Contact Page Mobile Fixes */
+    /* Contact Page Mobile Fixes - Smaller, centered containers */
     .contact-container {
         min-width: 0 !important;
-        width: calc(100vw - 32px) !important;
-        max-width: calc(100vw - 32px) !important;
-        padding: 0 16px !important;
+        width: 90% !important;
+        max-width: 400px !important;
+        padding: 0 20px !important;
         margin: 0 auto;
         box-sizing: border-box;
     }
@@ -1368,34 +1381,36 @@ footer {
         gap: 16px;
     }
     
-    /* General Mobile Container Fixes */
+    /* General Mobile Container Fixes - Smaller, centered approach */
     .hero-content,
     .main-content,
     .section-container {
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-        max-width: calc(100vw - 32px);
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+        max-width: calc(100vw - 48px);
+        width: 90%;
         margin: 0 auto;
         box-sizing: border-box;
     }
     
     /* Header Mobile Fixes */
     .header-container {
-        padding: 0 16px;
+        padding: 0 20px;
         box-sizing: border-box;
     }
     
     /* Blog Content Mobile Fixes */
     .blog-post-content {
-        padding: 0 16px !important;
-        max-width: calc(100vw - 32px);
+        padding: 0 24px !important;
+        max-width: calc(100vw - 48px);
+        width: 90%;
         margin: 3rem auto;
         box-sizing: border-box;
     }
     
     /* Footer Mobile Fixes */
     .footer-container {
-        padding: 0 16px !important;
+        padding: 0 20px !important;
         box-sizing: border-box;
     }
 }
