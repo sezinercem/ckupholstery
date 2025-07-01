@@ -1319,10 +1319,12 @@ footer {
     
     .customer-types-container {
         text-align: center;
-        padding: 0 24px;
-        max-width: calc(100vw - 48px);
-        width: 90%;
+        padding: 0 16px;
+        max-width: 350px;
+        width: 85%;
         margin: 0 auto;
+        display: block;
+        box-sizing: border-box;
     }
     
     .fabric-selection-container {
@@ -1353,22 +1355,31 @@ footer {
         object-fit: cover;
     }
     
-    /* Contact Page Mobile Fixes - Smaller, centered containers */
+    /* Contact Page Mobile Fixes - Better centered containers */
+    .contact-section {
+        padding: 40px 16px 40px 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .contact-container {
         min-width: 0 !important;
-        width: 90% !important;
-        max-width: 400px !important;
-        padding: 0 20px !important;
+        width: 85% !important;
+        max-width: 350px !important;
+        padding: 0 16px !important;
         margin: 0 auto;
         box-sizing: border-box;
+        display: block;
     }
     
     .contact-form {
         width: 100% !important;
         max-width: 100% !important;
-        padding: 20px 16px !important;
+        padding: 20px 12px !important;
         box-sizing: border-box;
-        margin: 0;
+        margin: 0 auto;
+        display: block;
     }
     
     .form-group {
