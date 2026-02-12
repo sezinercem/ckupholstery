@@ -20,886 +20,212 @@
     <meta name="twitter:description" content="Expert upholstery, restoration, and bespoke furniture services in Epping, Essex. Premium fabrics and craftsmanship for homes and businesses.">
     <meta name="twitter:image" content="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-    .announcement-bar {
-        background: #333;
-        color: #fff;
-        padding: 10px 0;
-        text-align: center;
-        font-size: 0.9rem;
-    }
-    .announcement-bar a {
-        color: #dec17b;
-        font-weight: 500;
-        text-decoration: none;
-    }
-    .announcement-bar a:hover {
-        text-decoration: underline;
-    }
-    .announcement-bar span {
-        display: inline-block;
-        margin-right: 8px;
-    }
-    @media (max-width: 600px) {
-        .announcement-bar {
-            font-size: 0.8rem;
-            padding: 8px 0;
-        }
-    }
-
-    .whatsapp-float {
-        position: fixed;
-        bottom: 24px;
-        right: 24px;
-        z-index: 9999;
-        background: #25d366;
-        border-radius: 50%;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: box-shadow 0.2s;
-    }
-    .whatsapp-float:hover {
-        box-shadow: 0 8px 32px rgba(34, 139, 34, 0.18);
-        background: #1ebea5;
-    }
-    .whatsapp-float img {
-        width: 38px;
-        height: 38px;
-        display: block;
-    }
-    @media (max-width: 600px) {
-        .whatsapp-float {
-            bottom: 16px;
-            right: 16px;
-            padding: 7px;
-        }
-        .whatsapp-float img {
-            width: 30px;
-            height: 30px;
-        }
-    }
-
-    .blog-preview-section {
-        background: #fff;
-        padding: 60px 0 40px 0;
-    }
-    .blog-preview-header {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 2.5rem;
-    }
-    .blog-preview-title {
-        font-size: 2.3rem;
-        font-weight: 700;
-        color: #222;
-        letter-spacing: 1px;
-        margin: 0;
-        position: relative;
-        display: inline-block;
-    }
-    .blog-preview-title:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        bottom: -8px;
-        left: 0;
-        background: linear-gradient(90deg, transparent, #dec17b, transparent);
-    }
-    .blog-cards-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-        justify-content: center;
-    }
-    .blog-card {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 22%;
-        max-width: 320px;
-        min-width: 260px;
-        transition: box-shadow 0.2s;
-    }
-    .blog-card:hover {
-        box-shadow: 0 6px 32px rgba(222,193,123,0.18);
-    }
-    .blog-card-image {
-        position: relative;
-        width: 100%;
-        height: 180px;
-        overflow: hidden;
-        background: #eee;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-start;
-    }
-    .blog-card-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
-    .blog-card-date {
-        position: absolute;
-        top: 16px;
-        left: 16px;
-        background: #fff;
-        color: #333;
-        border-radius: 8px;
-        padding: 6px 12px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        text-align: center;
-        font-size: 1rem;
-        font-weight: 600;
-        letter-spacing: 1px;
-    }
-    .blog-card-date .blog-card-date-day {
-        display: block;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #333;
-    }
-    .blog-card-date .blog-card-date-month {
-        display: block;
-        font-size: 0.85rem;
-        color: #a89a6d;
-        font-weight: 700;
-        letter-spacing: 1px;
-    }
-    .blog-card-content {
-        padding: 22px 20px 18px 20px;
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-    }
-    .blog-card-category {
-        background: #dec17b;
-        color: #fff;
-        font-size: 0.95rem;
-        font-weight: 700;
-        border-radius: 5px;
-        padding: 4px 14px;
-        display: inline-block;
-        margin-bottom: 12px;
-        letter-spacing: 1px;
-    }
-    .blog-card-title {
-        font-size: 1.35rem;
-        font-weight: 600;
-        margin: 0 0 8px 0;
-        color: #222;
-        line-height: 1.3;
-    }
-    .blog-card-author {
-        font-size: 1rem;
-        color: #bdbdbd;
-        margin-bottom: 10px;
-    }
-    .blog-card-desc {
-        font-size: 1.05rem;
-        color: #444;
-        margin-bottom: 18px;
-        flex: 1;
-    }
-    .blog-card-link {
-        color: #dec17b;
-        font-weight: 700;
-        text-decoration: none;
-        font-size: 1.08rem;
-        letter-spacing: 1px;
-        transition: text-decoration 0.2s;
-    }
-    .blog-card-link:hover {
-        text-decoration: underline;
-    }
-    @media (max-width: 1200px) {
-        .blog-card {
-            flex: 1 1 45%;
-        }
-    }
-    @media (max-width: 800px) {
-        .blog-preview-section {
-            padding: 40px 0 30px 0;
-        }
-        .blog-card {
-            flex: 1 1 90%;
-            max-width: 98vw;
-        }
-        .blog-card-image {
-            height: 220px; /* Increased from 200px */
-            background-position: center 70% !important; /* Much lower focal point */
-        }
-    }
-    @media (max-width: 600px) {
-        .blog-card-image {
-            height: 200px; /* Increased from 180px */
-            background-position: center 80% !important; /* Even lower for small screens */
-        }
-    }
-
-    /* About Us Section Styles */
-    .about-section {
-        background: #faf8f3;
-        padding: 56px 0 40px 0;
-        border-bottom: 1px solid #f0e8d8;
-    }
-    .about-container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 24px;
-        display: flex;
-        align-items: center;
-        gap: 48px;
-        flex-wrap: wrap;
-    }
-    .about-image {
-        flex: 1 1 220px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 180px;
-    }
-    .about-image img {
-        width: 160px;
-        height: 160px;
-        object-fit: contain;
-        border-radius: 16px;
-        box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-        background: #fff;
-    }
-    .about-content {
-        flex: 2 1 400px;
-        min-width: 260px;
-    }
-    .about-title {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #dec17b;
-        margin-bottom: 18px;
-        letter-spacing: 1px;
-    }
-    .about-intro {
-        font-size: 1.15rem;
-        font-weight: 500;
-        color: #333;
-        margin-bottom: 14px;
-    }
-    .about-content p {
-        font-size: 1.05rem;
-        color: #444;
-        margin-bottom: 12px;
-        line-height: 1.7;
-    }
-    @media (max-width: 900px) {
-        .about-container {
-            flex-direction: column;
-            gap: 28px;
-            text-align: center;
-        }
-        .about-image img {
-            width: 120px;
-            height: 120px;
-        }
-    }
-
-    /* Fabrics Slideshow Section Styles */
-    .fabrics-slideshow-section {
-        background: #f7f5ef;
-        padding: 38px 0 28px 0;
-        display: flex;
-        justify-content: center;
-    }
-    .fabrics-slideshow {
-        position: relative;
-        width: 80%; /* Increased from 340px */
-        height: 500px; /* Increased from 180px */
-        margin: 0 auto;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-        background: #eae6db;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .fabrics-slide {
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        opacity: 0;
-        transition: opacity 0.7s;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .fabrics-slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
-    .fabrics-slide.active {
-        opacity: 1;
-        z-index: 2;
-    }
-    .fabrics-slideshow-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: linear-gradient(0deg, rgba(34,34,34,0.68) 60%, rgba(34,34,34,0.12) 100%);
-        color: #fff;
-        padding: 18px 0 10px 0;
-        text-align: center;
-        z-index: 3;
-        pointer-events: none;
-    }
-    .fabrics-slideshow-overlay h3 {
-        margin: 0 0 24px 0;
-        padding: 12px 32px;
-        background: rgba(34,34,34,0.72);
-        border-radius: 8px;
-        font-size: 1.35rem;
-        font-weight: 700;
-        color: #fff;
-        letter-spacing: 1px;
-        text-shadow: 0 2px 8px rgba(0,0,0,0.18);
-    }
-    /* Overlay container for fabrics slideshow */
-    .fabrics-overlay-container {
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        z-index: 3;
-        pointer-events: none;
-        background: linear-gradient(0deg, rgba(34,34,34,0.68) 60%, rgba(34,34,34,0.12) 100%);
-    }
-    .fabrics-overlay-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 10;
-        pointer-events: none;
-        margin-bottom: 0; /* Remove any margin that could move it */
-        opacity: 1;       /* Always fully visible */
-        transition: none; /* Remove any transitions */
-    }
-    .fabrics-overlay-content h3 {
-        margin: 0;
-        padding: 14px 36px;
-        background: rgba(34,34,34,0.82);
-        border-radius: 10px;
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: #fff;
-        letter-spacing: 1px;
-        text-shadow: 0 2px 8px rgba(0,0,0,0.18);
-    }
-    @media (max-width: 600px) {
-        .fabrics-slideshow {
-            width: 98vw;
-            min-width: 240px;
-            height: 140px;
-            border-radius: 10px;
-        }
-        .fabrics-slideshow-overlay {
-            padding: 10px 0 6px 0;
-        }
-        .fabrics-slideshow-overlay h3 {
-            font-size: 1rem;
-            padding: 8px 16px;
-            margin-bottom: 10px;
-        }
-        .fabrics-overlay-content {
-            margin-bottom: 12px;
-        }
-        .fabrics-overlay-content h3 {
-            font-size: 1rem;
-            padding: 8px 16px;
-        }
-    }
-
-    /* Contact Section Styles */
-    .contact-section {
-        background: #fff;
-        padding: 60px 0;
-    }
-    .contact-container {
-        max-width: 1100px; /* Increased from 800px */
-        min-width: 800px; /* Add this line for a minimum width */
-        margin: 0 auto;
-        padding: 0 24px;
-    }
-    @media (max-width: 700px) {
-        .contact-container {
-            min-width: 0; /* Allow it to shrink on small screens */
-            padding: 0 8px;
-        }
-    }
-    .contact-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #222;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    .contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .contact-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-    .contact-field {
-        flex: 1 1 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    .contact-field label {
-        font-size: 1rem;
-        color: #333;
-        margin-bottom: 8px;
-    }
-    .contact-field input,
-    .contact-field textarea {
-        font-size: 1rem;
-        color: #333;
-        padding: 12px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        transition: border-color 0.3s;
-    }
-    .contact-field input:focus,
-    .contact-field textarea:focus {
-        border-color: #dec17b;
-        outline: none;
-    }
-    .button {
-        background: #dec17b;
-        color: #fff;
-        font-size: 1.1rem;
-        font-weight: 600;
-        padding: 12px 24px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background 0.3s;
-        text-align: center;
-        display: inline-block;
-    }
-    .button:hover {
-        background: #d1a76b;
-    }
-    @media (max-width: 600px) {
-        .contact-row {
-            flex-direction: column;
-        }
-    }
-
-    /* Add to your <style> or styles.css */
-    /* Hide hamburger by default, show on mobile */
-    .hamburger {
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 38px;
-        height: 38px;
-        cursor: pointer;
-        z-index: 1001;
-        margin-left: auto;
-    }
-    .hamburger span {
-        display: block;
-        width: 28px;
-        height: 4px;
-        margin: 4px 0;
-        background: #dec17b; /* Gold color */
-        border-radius: 2px;
-        transition: 0.3s;
-    }
-    @media (max-width: 700px) {
-        .hamburger {
-            display: flex;
-        }
-        nav {
-            position: fixed;
-            top: 0;
-            right: -100vw;
-            width: 70vw;
-            max-width: 320px;
-            height: 100vh;
-            background: #fff;
-            box-shadow: -2px 0 16px rgba(0,0,0,0.08);
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: 80px 24px 24px 24px;
-            transition: right 0.3s;
-            z-index: 1000;
-        }
-        nav.open {
-            right: 0;
-        }
-        nav a {
-            display: block;
-            margin: 18px 0;
-            font-size: 1.2rem;
-            color: #d1a76b;
-        }
-        .header-container {
-            flex-wrap: nowrap;
-        }
-    }
-
-    @media (max-width: 700px) {
-        .hero-overlay {
-            padding: 12px 16px;
-            max-width: 80%;
-            width: 80%;
-            margin: 0 auto;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            position: absolute;
-        }
-        .hero-overlay h2 {
-            font-size: 1.6rem;
-            line-height: 1.2;
-            margin-bottom: 10px;
-        }
-        .hero-subtitle {
-            font-size: 0.85rem;
-            margin-bottom: 8px;
-        }
-        .hero-desc {
-            font-size: 0.9rem;
-            line-height: 1.4;
-            margin-bottom: 14px;
-        }
-        .hero-overlay .button {
-            font-size: 0.95rem;
-            padding: 8px 18px;
-        }
-    }
-
-    @media (max-width: 700px) {
-        .features,
-        .about-section,
-        .fabrics-slideshow-section,
-        .blog-preview-section,
-        .contact-section {
-            padding-left: 16px;
-            padding-right: 16px;
-        }
-        
-        /* Explicitly remove padding from hero */
-        .hero-slideshow {
-            padding-left: 0;
-            padding-right: 0;
-        }
-        
-        /* Also ensure inner containers don't add extra padding */
-        .about-container,
-        .blog-cards-container,
-        .contact-container {
-            padding-left: 0;
-            padding-right: 0;
-        }
-        
-        .fabrics-slideshow {
-            width: calc(100% - 32px); /* Account for the 16px padding on each side */
-        }
-    }
-    </style>
 </head>
 <body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        <span>
-            Looking for custom cushions &amp; premium fabrics? Visit our sister site 
-            <a href="https://www.ckhomeandfurniture.co.uk" target="_blank" rel="noopener">ckhomeandfurniture.co.uk</a>
-        </span>
+        Looking for custom cushions &amp; premium fabrics? Visit our sister site
+        <a href="https://www.ckhomeandfurniture.co.uk" target="_blank" rel="noopener">ckhomeandfurniture.co.uk</a>
     </div>
+
     <header>
         <div class="header-container">
             <a href="index.html">
                 <img src="images/CK Upholstery logo.png" alt="CK Upholstery Logo" class="logo">
             </a>
             <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="services.html">Products & Services</a>
+                <a href="services.html">Products &amp; Services</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact Us</a>
             </nav>
         </div>
     </header>
 
-    <!-- Features Section (SVG icons) -->
-    <section class="features">
-        <div class="feature">
-            <span class="feature-icon">
-                <!-- Sofa Icon SVG -->
-                <svg width="120" height="90" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="60" cy="45" r="40" stroke="#dec17b" stroke-width="5" fill="none"/>
-                    <rect x="25" y="60" width="70" height="20" rx="5" stroke="#dec17b" stroke-width="5" fill="none"/>
-                </svg>
-            </span>
-            <span class="feature-sub">Bring New Life</span>
-            <span class="feature-title">Restore Furniture</span>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-slideshow">
+            <div class="slide active" style="background-image: url('https://images.pexels.com/photos/1571457/pexels-photo-1571457.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+            <div class="slide" style="background-image: url('https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+            <div class="slide" style="background-image: url('https://images.pexels.com/photos/3614082/pexels-photo-3614082.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
         </div>
-        <div class="feature">
-            <span class="feature-icon">
-                <!-- Sewing Machine Icon SVG -->
-                <svg width="120" height="90" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="30" y="30" width="60" height="40" rx="8" fill="#dec17b"/>
-                    <rect x="50" y="40" width="20" height="20" rx="3" fill="white"/>
-                    <circle cx="90" cy="50" r="5" fill="#dec17b"/>
-                </svg>
-            </span>
-            <span class="feature-sub">Make it flawless</span>
-            <span class="feature-title">Minor Repairs</span>
-        </div>
-        <div class="feature">
-            <span class="feature-icon">
-                <!-- Fabric/Scissors Icon SVG -->
-                <svg width="120" height="90" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="60" cy="45" r="40" fill="#dec17b"/>
-                    <rect x="30" y="43" width="60" height="4" fill="white"/>
-                    <path d="M80 45 L95 38 M80 45 L95 52" stroke="white" stroke-width="4" stroke-linecap="round"/>
-                    <circle cx="95" cy="38" r="3" fill="white"/>
-                    <circle cx="95" cy="52" r="3" fill="white"/>
-                    <circle cx="60" cy="45" r="30" stroke="white" stroke-dasharray="4 8" stroke-width="2" fill="none"/>
-                </svg>
-            </span>
-            <span class="feature-sub">Home Decor</span>
-            <span class="feature-title">Fabric</span>
-        </div>
-    </section>
-
-    <!-- Hero Slideshow Section -->
-    <section class="hero-slideshow">
-        <div class="slide active" style="background-image: url('https://images.pexels.com/photos/1571457/pexels-photo-1571457.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
-        <div class="slide" style="background-image: url('https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
-        <div class="slide" style="background-image: url('https://images.pexels.com/photos/3614082/pexels-photo-3614082.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
-        <div class="hero-overlay">
-            <p class="hero-subtitle">Transform Your Furniture with Our Upholstery Services</p>
-            <h2>Revive Your Home Decor with<br>Our Furniture Re-Upholstery</h2>
+        <div class="hero-content">
+            <span class="hero-label">Transform Your Furniture</span>
+            <h1 class="hero-title">Revive Your Home Decor with Our Furniture Re-Upholstery</h1>
             <p class="hero-desc">
                 Transform your outdated furniture into something fresh and stylish with our expert re-upholstery services. We use high-quality fabrics and techniques to bring your favourite furniture back to life.
             </p>
-            <a href="services.html" class="button">VIEW MORE</a>
-        </div>
-    </section>
-
-    <!-- About Us Section (replace the previous services-highlight-section with this) -->
-    <section class="about-section">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png" alt="CK Upholstery Team">
-            </div>
-            <div class="about-content">
-                <h2 class="about-title">About CK Upholstery</h2>
-                <p class="about-intro">
-                    CK Upholstery is a family-run business built on decades of experience, passion, and craftsmanship.
-                </p>
-                <p>
-                    Our story begins with <strong>Murat Yilmaz</strong>, who started his journey in upholstery at just 14 years old, working on boats and yachts along the Turkish coast. Driven by a love for the craft, Murat moved to the UK and, together with <strong>Gemma</strong>, founded CK Upholstery.
-                </p>
-                <p>
-                    What began in the back of a garage in Waltham Cross quickly grew through dedication and word of mouth. After completing hundreds of bespoke projects for local clients, CK Upholstery expanded to a full workshop and showroom in Epping, Essex, where our talented team now serves homes and businesses across the region.
-                </p>
-                <p>
-                    Today, we’re proud to offer expert upholstery, restoration, and custom furniture services—always with a personal touch and a commitment to quality.
-                </p>
+            <div class="hero-actions">
+                <a href="services.html" class="button">View Our Services</a>
+                <a href="contact.html" class="btn-outline">Get a Free Quote</a>
             </div>
         </div>
     </section>
 
-    <!-- Premium Fabrics Slideshow Section (place below About Us section, above Blog Preview) -->
-    <section class="fabrics-slideshow-section">
-        <div class="fabrics-slideshow">
-            <div class="fabrics-overlay-content">
-                <h3>Premium Fabrics Used For Every Job</h3>
+    <!-- Features -->
+    <section class="features-strip">
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="18" width="24" height="8" rx="3" stroke="#dec17b" stroke-width="2"/>
+                        <path d="M8 18V12C8 9 12 6 16 6C20 6 24 9 24 12V18" stroke="#dec17b" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="feature-label">Bring New Life</div>
+                    <div class="feature-name">Restore Furniture</div>
+                </div>
             </div>
-            <!-- Slides -->
-            <div class="fabrics-slide active">
-                <img 
-                    src="https://covertex-website.transforms.svdcdn.com/production/images/Maximo-Image.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1685453312&s=c34d5f17ea580f56f9f661017a9bb130"
-                    srcset="
-                        https://covertex-website.transforms.svdcdn.com/production/images/Maximo-Image.jpg?w=300&h=370&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1685453312&s=5706e450dab0ca1896e583f79fb06882 300w,
-                        https://covertex-website.transforms.svdcdn.com/production/images/Maximo-Image.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1685453312&s=c34d5f17ea580f56f9f661017a9bb130 600w
-                    "
-                    sizes="(max-width: 600px) 100vw, 170px"
-                    alt="Maximo Fabric"
-                >
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="10" width="20" height="14" rx="3" stroke="#dec17b" stroke-width="2"/>
+                        <circle cx="16" cy="17" r="3" stroke="#dec17b" stroke-width="2"/>
+                        <line x1="16" y1="6" x2="16" y2="10" stroke="#dec17b" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="feature-label">Make It Flawless</div>
+                    <div class="feature-name">Minor Repairs</div>
+                </div>
             </div>
-            <div class="fabrics-slide">
-                <img 
-                    src="https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/uffizzi/Uffizi-min-new.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1742473856&s=1929ccc5dc062d000df06694e699f17e"
-                    srcset="
-                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/uffizzi/Uffizi-min-new.jpg?w=300&h=370&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1742473856&s=94567aed7477f9144dadeaca9acc137a 300w,
-                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/uffizzi/Uffizi-min-new.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1742473856&s=1929ccc5dc062d000df06694e699f17e 600w
-                    "
-                    sizes="(max-width: 600px) 100vw, 170px"
-                    alt="Uffizi Fabric"
-                >
-            </div>
-            <div class="fabrics-slide">
-                <img 
-                    src="https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/dolce/DOLCE-1.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1674214947&s=5734b6ff80a808049ceb6486a85964e2"
-                    srcset="
-                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/dolce/DOLCE-1.jpg?w=300&h=370&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1674214947&s=2e5e2e3e8e7b6e2e7e8e7e8e7e8e7e8e 300w,
-                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/dolce/DOLCE-1.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1674214947&s=5734b6ff80a808049ceb6486a85964e2 600w
-                    "
-                    sizes="(max-width: 600px) 100vw, 170px"
-                    alt="Dolce Fabric"
-                >
-            </div>
-            <div class="fabrics-slide">
-                <img 
-                    src="https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/destino/Destino_2023-08-04-105625_vwbf-min.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1749466192&s=8b388f96dd448b69d20021e071e350f5"
-                    srcset="
-                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/destino/Destino_2023-08-04-105625_vwbf-min.jpg?w=300&h=370&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1749466192&s=e5c0c2d3b35434ecbdcbc100a7945100 300w,
-                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/destino/Destino_2023-08-04-105625_vwbf-min.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1749466192&s=8b388f96dd448b69d20021e071e350f5 600w
-                    "
-                    sizes="(max-width: 600px) 100vw, 170px"
-                    alt="Destino Fabric"
-                >
-            </div>
-            <div class="fabrics-slide">
-                <img 
-                    src="https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/cortona/Cortona-min-min-2-min-4-min-1.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1749480235&s=9448e3e4cfcbd1d33fb20018e99d5b1d"
-                    srcset="
-                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/cortona/Cortona-min-min-2-min-4-min-1.jpg?w=300&h=370&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1749480235&s=b79fea79b66aabbe28aa74331d2957f4 300w,
-                        https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/cortona/Cortona-min-min-2-min-4-min-1.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1749480235&s=9448e3e4cfcbd1d33fb20018e99d5b1d 600w
-                    "
-                    sizes="(max-width: 600px) 100vw, 170px"
-                    alt="Cortona Fabric"
-                >
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="10" stroke="#dec17b" stroke-width="2" stroke-dasharray="3 3"/>
+                        <path d="M20 16L26 12M20 16L26 20" stroke="#dec17b" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="feature-label">Home Decor</div>
+                    <div class="feature-name">Premium Fabric</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Blog Preview Section: Place this where you want the 3 containers to appear -->
-    <section class="blog-preview-section">
-        <div class="blog-cards-container">
-            <!-- Card 1 -->
-            <div class="blog-card">
-                <div class="blog-card-image" style="background-image: url('https://images.pexels.com/photos/1571457/pexels-photo-1571457.jpeg?auto=compress&cs=tinysrgb&w=800');">
-                    <div class="blog-card-date">
-                        <span class="blog-card-date-day">30</span>
-                        <span class="blog-card-date-month">APR</span>
-                    </div>
+    <!-- About -->
+    <section class="about-home">
+        <div class="about-home-grid">
+            <img src="https://ckupholstery.co.uk/wp-content/uploads/2021/04/ck-logo-new.png" alt="CK Upholstery" class="about-home-logo">
+            <div class="about-home-content">
+                <h2>About <span class="highlight">CK Upholstery</span></h2>
+                <p>CK Upholstery is a family-run business built on decades of experience, passion, and craftsmanship.</p>
+                <p>Our story begins with <strong>Murat Yilmaz</strong>, who started his journey in upholstery at just 14 years old, working on boats and yachts along the Turkish coast. Driven by a love for the craft, Murat moved to the UK and, together with <strong>Gemma</strong>, founded CK Upholstery.</p>
+                <p>What began in the back of a garage in Waltham Cross quickly grew through dedication and word of mouth. After completing hundreds of bespoke projects for local clients, CK Upholstery expanded to a full workshop and showroom in Epping, Essex, where our talented team now serves homes and businesses across the region.</p>
+                <p>Today, we're proud to offer expert upholstery, restoration, and custom furniture services&mdash;always with a personal touch and a commitment to quality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fabrics Slideshow -->
+    <section class="fabrics-section">
+        <div class="fabrics-container">
+            <div class="fabrics-slideshow">
+                <div class="fabrics-overlay">
+                    <h3>Premium Fabrics Used For Every Job</h3>
                 </div>
-                <div class="blog-card-content">
-                    <span class="blog-card-category">UPHOLSTERY</span>
-                    <h3 class="blog-card-title">A brief history of Upholstery</h3>
-                    <span class="blog-card-author">CK Upholstery</span>
-                    <p class="blog-card-desc">
-                        Upholstery is the work of providing furniture, especially seats, with padding, springs, webbing, and...
-                    </p>
-                    <a href="blog.html" class="blog-card-link">CONTINUE READING</a>
+                <div class="fabrics-slide active">
+                    <img src="https://covertex-website.transforms.svdcdn.com/production/images/Maximo-Image.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1685453312&s=c34d5f17ea580f56f9f661017a9bb130" alt="Maximo Fabric">
+                </div>
+                <div class="fabrics-slide">
+                    <img src="https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/uffizzi/Uffizi-min-new.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1742473856&s=1929ccc5dc062d000df06694e699f17e" alt="Uffizi Fabric">
+                </div>
+                <div class="fabrics-slide">
+                    <img src="https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/dolce/DOLCE-1.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1674214947&s=5734b6ff80a808049ceb6486a85964e2" alt="Dolce Fabric">
+                </div>
+                <div class="fabrics-slide">
+                    <img src="https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/destino/Destino_2023-08-04-105625_vwbf-min.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1749466192&s=8b388f96dd448b69d20021e071e350f5" alt="Destino Fabric">
+                </div>
+                <div class="fabrics-slide">
+                    <img src="https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/cortona/Cortona-min-min-2-min-4-min-1.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1749480235&s=9448e3e4cfcbd1d33fb20018e99d5b1d" alt="Cortona Fabric">
                 </div>
             </div>
-            <!-- Card 2 -->
-            <div class="blog-card">
-                <div class="blog-card-image" style="background-image: url('https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=800');">
-                    <div class="blog-card-date">
-                        <span class="blog-card-date-day">30</span>
-                        <span class="blog-card-date-month">APR</span>
-                    </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section class="blog-preview">
+        <div class="section-header">
+            <div class="section-label">From Our Blog</div>
+            <h2 class="section-title">Latest Articles</h2>
+        </div>
+        <div class="blog-cards">
+            <article class="blog-card">
+                <img class="blog-card-img" src="https://images.pexels.com/photos/1571457/pexels-photo-1571457.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A brief history of Upholstery">
+                <div class="blog-card-body">
+                    <span class="blog-card-category">Upholstery</span>
+                    <div class="blog-card-date">30 April</div>
+                    <h3 class="blog-card-title">A Brief History of Upholstery</h3>
+                    <p class="blog-card-excerpt">Upholstery is the work of providing furniture, especially seats, with padding, springs, webbing, and...</p>
+                    <a href="blog-history-upholstery.html" class="blog-card-link">Continue Reading</a>
                 </div>
-                <div class="blog-card-content">
-                    <span class="blog-card-category">RESTORATION</span>
+            </article>
+            <article class="blog-card">
+                <img class="blog-card-img" src="https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Furniture Restoration">
+                <div class="blog-card-body">
+                    <span class="blog-card-category">Restoration</span>
+                    <div class="blog-card-date">30 April</div>
                     <h3 class="blog-card-title">Furniture Restoration</h3>
-                    <span class="blog-card-author">CK Upholstery</span>
-                    <p class="blog-card-desc">
-                        The conservation and restoration of wooden furniture is an activity dedicated to the preservation and repair of antique and modern pieces, ensuring their beauty and function for years to come.
-                    </p>
-                    <a href="blog.html" class="blog-card-link">CONTINUE READING</a>
+                    <p class="blog-card-excerpt">The conservation and restoration of wooden furniture is an activity dedicated to the preservation and repair of antique and modern pieces.</p>
+                    <a href="blog-furniture-restoration.html" class="blog-card-link">Continue Reading</a>
                 </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="blog-card">
-                <div class="blog-card-image" style="background-image: url('https://images.pexels.com/photos/3614082/pexels-photo-3614082.jpeg?auto=compress&cs=tinysrgb&w=800');">
-                    <div class="blog-card-date">
-                        <span class="blog-card-date-day">30</span>
-                        <span class="blog-card-date-month">APR</span>
-                    </div>
+            </article>
+            <article class="blog-card">
+                <img class="blog-card-img" src="https://images.pexels.com/photos/3614082/pexels-photo-3614082.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Canopies & Awnings">
+                <div class="blog-card-body">
+                    <span class="blog-card-category">Canopies &amp; Awnings</span>
+                    <div class="blog-card-date">30 April</div>
+                    <h3 class="blog-card-title">Canopies &amp; Awnings: Style &amp; Shelter</h3>
+                    <p class="blog-card-excerpt">Discover how custom canopies and awnings can enhance your outdoor spaces, offering both style and protection for homes and businesses.</p>
+                    <a href="blog-canopies-awnings.html" class="blog-card-link">Continue Reading</a>
                 </div>
-                <div class="blog-card-content">
-                    <span class="blog-card-category">CANOPIES & AWNINGS</span>
-                    <h3 class="blog-card-title">Canopies & Awnings: Style & Shelter</h3>
-                    <span class="blog-card-author">CK Upholstery</span>
-                    <p class="blog-card-desc">
-                        Discover how custom canopies and awnings can enhance your outdoor spaces, offering both style and protection for homes and businesses.
-                    </p>
-                    <a href="blog.html" class="blog-card-link">CONTINUE READING</a>
-                </div>
-            </div>
+            </article>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="contact-container">
-            <h2 class="contact-title">Contact Us</h2>
-            <form class="contact-form" autocomplete="off">
-                <div class="contact-row">
-                    <div class="contact-field">
+    <!-- Contact Form -->
+    <section class="contact-home">
+        <div class="contact-home-inner">
+            <div class="section-header">
+                <div class="section-label">Get In Touch</div>
+                <h2 class="section-title">Contact Us</h2>
+            </div>
+            <form class="contact-form" action="https://formspree.io/f/movkqzzb" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
                         <label for="contact-name">Name</label>
-                        <input type="text" id="contact-name" name="name" required>
+                        <input type="text" id="contact-name" name="name" placeholder="Your name" required>
                     </div>
-                    <div class="contact-field">
+                    <div class="form-group">
                         <label for="contact-email">Email</label>
-                        <input type="email" id="contact-email" name="email" required>
+                        <input type="email" id="contact-email" name="email" placeholder="Your email" required>
                     </div>
                 </div>
-                <div class="contact-row">
-                    <div class="contact-field">
+                <div class="form-row">
+                    <div class="form-group">
                         <label for="contact-phone">Phone</label>
-                        <input type="tel" id="contact-phone" name="phone">
+                        <input type="tel" id="contact-phone" name="phone" placeholder="Your phone number">
                     </div>
-                    <div class="contact-field">
+                    <div class="form-group">
                         <label for="contact-location">Location</label>
-                        <input type="text" id="contact-location" name="location">
+                        <input type="text" id="contact-location" name="location" placeholder="Your location">
                     </div>
                 </div>
-                <div class="contact-field">
+                <div class="form-group">
                     <label for="contact-message">Message</label>
-                    <textarea id="contact-message" name="message" rows="5" required></textarea>
+                    <textarea id="contact-message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
                 </div>
                 <button type="submit" class="button">Send Message</button>
             </form>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-logo">
@@ -907,7 +233,7 @@
             </div>
             <nav class="footer-links">
                 <a href="index.html">Home</a>
-                <a href="services.html">Products & Services</a>
+                <a href="services.html">Products &amp; Services</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact Us</a>
             </nav>
@@ -921,7 +247,7 @@
             <div class="quick-links-title">Quick Links</div>
             <ul class="quick-links-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Products & Services</a></li>
+                <li><a href="services.html">Products &amp; Services</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -929,46 +255,35 @@
         <hr class="footer-separator">
     </footer>
 
-    <!-- Add this script just before </body> -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const slides = document.querySelectorAll('.hero-slideshow .slide');
-        let slideIndex = 0;
-        setInterval(() => {
-            slides[slideIndex].classList.remove('active');
-            slideIndex = (slideIndex + 1) % slides.length;
-            slides[slideIndex].classList.add('active');
-        }, 3000);
-    });
-    </script>
-
-    <!-- Add this script for fabric slideshow (below the hero slideshow script) -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const fabricSlides = document.querySelectorAll('.fabrics-slide');
-        let fabricIndex = 0;
-        setInterval(() => {
-            fabricSlides[fabricIndex].classList.remove('active');
-            fabricIndex = (fabricIndex + 1) % fabricSlides.length;
-            fabricSlides[fabricIndex].classList.add('active');
-        }, 2500);
-    });
-    </script>
-
-    <!-- WhatsApp Floating Button (add just before </body>) -->
+    <!-- WhatsApp -->
     <a href="https://wa.me/447944715635?text=Hi%2C%20I%27m%20interested%20in%20upholstery%20services" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 
-    <!-- Add just before </body> -->
     <script>
     document.addEventListener("DOMContentLoaded", function() {
+        // Hero slideshow
+        const slides = document.querySelectorAll('.hero-slideshow .slide');
+        let idx = 0;
+        setInterval(() => {
+            slides[idx].classList.remove('active');
+            idx = (idx + 1) % slides.length;
+            slides[idx].classList.add('active');
+        }, 4000);
+
+        // Fabric slideshow
+        const fabricSlides = document.querySelectorAll('.fabrics-slide');
+        let fIdx = 0;
+        setInterval(() => {
+            fabricSlides[fIdx].classList.remove('active');
+            fIdx = (fIdx + 1) % fabricSlides.length;
+            fabricSlides[fIdx].classList.add('active');
+        }, 3000);
+
+        // Hamburger
         const hamburger = document.getElementById('hamburger-menu');
         const nav = document.querySelector('header nav');
-        hamburger.addEventListener('click', function() {
-            nav.classList.toggle('open');
-        });
-        // Optional: close menu when clicking a link
+        hamburger.addEventListener('click', () => nav.classList.toggle('open'));
         nav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => nav.classList.remove('open'));
         });
