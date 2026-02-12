@@ -989,6 +989,11 @@ nav a:hover, nav a.active {
 }
 .about-text strong { color: var(--gray-800); }
 
+.about-text-full {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 @media (max-width: 900px) {
   .about-layout { grid-template-columns: 1fr; gap: 32px; }
   .about-image-wrap { min-height: 280px; }
