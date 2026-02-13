@@ -53,7 +53,7 @@
         <div class="blog-post-meta">CANOPIES &amp; AWNINGS &mdash; 30 APR &mdash; CK Upholstery</div>
     </section>
 
-    <div class="blog-post-content">
+    <div class="blog-post-content" data-animate="fade-up">
         <p>An awning or overhang is a secondary covering attached to the exterior wall of a building. It is typically composed of canvas woven of acrylic, cotton or polyester yarn, or vinyl laminated to polyester fabric that is stretched tightly over a light structure of aluminium, iron or steel, possibly wood or transparent material.</p>
         <p>The configuration of this structure is something of a truss, space frame or planar frame. Awnings are also often constructed of aluminium under-structure with aluminium sheeting.</p>
         <p>These aluminium awnings are often used when a fabric awning is not a practical application where snow load as well as wind loads may be a factor.</p>
@@ -95,13 +95,6 @@
         <hr class="footer-separator">
     </footer>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const hamburger = document.getElementById('hamburger-menu');
-        const nav = document.querySelector('header nav');
-        hamburger.addEventListener('click', () => nav.classList.toggle('open'));
-        nav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => nav.classList.remove('open')); });
-    });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

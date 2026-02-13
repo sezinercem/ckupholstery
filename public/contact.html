@@ -70,7 +70,7 @@
     <section class="section">
         <div class="container">
             <div class="contact-layout">
-                <div class="contact-form-card">
+                <div class="contact-form-card" data-animate="fade-left">
                     <h2>Send Us a Message</h2>
                     <form class="contact-form" action="https://formspree.io/f/movkqzzb" method="POST">
                         <input type="text" name="name" placeholder="Name" required>
@@ -81,7 +81,7 @@
                         <button type="submit" class="button">Send Message</button>
                     </form>
                 </div>
-                <div class="contact-info-card">
+                <div class="contact-info-card" data-animate="fade-right">
                     <h3>Contact Information</h3>
                     <div class="info-item">
                         <span class="info-label">Email</span>
@@ -139,15 +139,6 @@
         <hr class="footer-separator">
     </footer>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const hamburger = document.getElementById('hamburger-menu');
-        const nav = document.querySelector('header nav');
-        hamburger.addEventListener('click', () => nav.classList.toggle('open'));
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => nav.classList.remove('open'));
-        });
-    });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

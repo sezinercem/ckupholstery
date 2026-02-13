@@ -53,7 +53,7 @@
         <div class="blog-post-meta">UPHOLSTERY &mdash; 30 APR &mdash; CK Upholstery</div>
     </section>
 
-    <div class="blog-post-content">
+    <div class="blog-post-content" data-animate="fade-up">
         <p>Upholstery is the work of providing furniture, especially seats, with padding, springs, webbing, and fabric or leather covers.</p>
         <p>The word upholstery comes from the Middle English word <strong>upholder</strong>, which was referred to an artisan who makes fabric furnishings.</p>
         <p>The term is equally applicable to domestic, automobile, airplane and boat furniture and can be applied to mattresses, particularly the upper layers, though these often differ significantly in design.</p>
@@ -98,13 +98,6 @@
         <hr class="footer-separator">
     </footer>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const hamburger = document.getElementById('hamburger-menu');
-        const nav = document.querySelector('header nav');
-        hamburger.addEventListener('click', () => nav.classList.toggle('open'));
-        nav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => nav.classList.remove('open')); });
-    });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

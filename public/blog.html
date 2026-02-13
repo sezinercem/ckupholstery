@@ -89,7 +89,7 @@
     </section>
 
     <section class="blog-list-section">
-        <div class="articles-list">
+        <div class="articles-list" data-stagger>
             <article class="article-card" itemscope itemtype="https://schema.org/Article">
                 <div class="article-image">
                     <img src="https://images.pexels.com/photos/1571457/pexels-photo-1571457.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A brief history of Upholstery" itemprop="image">
@@ -174,15 +174,6 @@
         <hr class="footer-separator">
     </footer>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const hamburger = document.getElementById('hamburger-menu');
-        const nav = document.querySelector('header nav');
-        hamburger.addEventListener('click', () => nav.classList.toggle('open'));
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => nav.classList.remove('open'));
-        });
-    });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -53,7 +53,7 @@
         <div class="blog-post-meta">RESTORATION &mdash; 30 APR &mdash; CK Upholstery</div>
     </section>
 
-    <div class="blog-post-content">
+    <div class="blog-post-content" data-animate="fade-up">
         <p>The conservation and restoration of wooden furniture is an activity dedicated to the preservation and protection of wooden furniture objects of historical and personal value. When applied to cultural heritage this activity is generally undertaken by a conservator-restorer.</p>
         <p>Furniture conservation and restoration can be divided into two general areas: structure and finish.</p>
         <p>Structure generally relates to wood and can be divided into solid, joined, and veneered wood.</p>
@@ -95,13 +95,6 @@
         <hr class="footer-separator">
     </footer>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const hamburger = document.getElementById('hamburger-menu');
-        const nav = document.querySelector('header nav');
-        hamburger.addEventListener('click', () => nav.classList.toggle('open'));
-        nav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => nav.classList.remove('open')); });
-    });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

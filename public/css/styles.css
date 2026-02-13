@@ -1101,6 +1101,139 @@ nav a:hover, nav a.active {
   padding: 16px 40px;
 }
 
+/* ===== Scroll Reveal Animations ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-32px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes barDraw {
+  from { width: 0; }
+  to { width: 60px; }
+}
+
+/* Elements waiting to be revealed */
+[data-animate] {
+  opacity: 0;
+}
+[data-animate].is-visible {
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-animate="fade-up"].is-visible { animation-name: fadeUp; }
+[data-animate="fade-in"].is-visible { animation-name: fadeIn; }
+[data-animate="fade-left"].is-visible { animation-name: fadeLeft; }
+[data-animate="fade-right"].is-visible { animation-name: fadeRight; }
+[data-animate="scale-in"].is-visible { animation-name: scaleIn; }
+
+/* Stagger children — applied via JS */
+[data-stagger] > * {
+  opacity: 0;
+}
+[data-stagger] > .is-visible {
+  animation-name: fadeUp;
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Hero entrance (plays on page load, not scroll) */
+.hero-content .hero-label,
+.hero-content .hero-title,
+.hero-content .hero-desc,
+.hero-content .hero-actions {
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hero-content .hero-label {
+  animation: fadeUp 0.8s 0.2s both;
+}
+.hero-content .hero-title {
+  animation: fadeUp 0.8s 0.4s both;
+}
+.hero-content .hero-desc {
+  animation: fadeUp 0.8s 0.6s both;
+}
+.hero-content .hero-actions {
+  animation: fadeUp 0.8s 0.8s both;
+}
+
+/* Page hero title entrance */
+.page-hero-title {
+  animation: fadeUp 0.7s 0.15s both;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+.page-hero-bar {
+  animation: barDraw 0.6s 0.5s both;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Blog post hero entrance */
+.blog-post-hero h1 {
+  animation: fadeUp 0.7s 0.15s both;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-post-hero .blog-post-meta {
+  animation: fadeIn 0.6s 0.5s both;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Header scroll state */
+header {
+  transition: padding var(--transition), box-shadow var(--transition);
+}
+header.scrolled {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+header.scrolled .header-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+header.scrolled .logo {
+  height: 40px;
+}
+.logo {
+  transition: height var(--transition), opacity var(--transition);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] { opacity: 1; }
+  [data-stagger] > * { opacity: 1; }
+  [data-animate].is-visible,
+  [data-stagger] > .is-visible {
+    animation: none;
+  }
+  .hero-content .hero-label,
+  .hero-content .hero-title,
+  .hero-content .hero-desc,
+  .hero-content .hero-actions,
+  .page-hero-title,
+  .page-hero-bar,
+  .blog-post-hero h1,
+  .blog-post-hero .blog-post-meta {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 /* ===== Utilities ===== */
 .text-center { text-align: center; }
 .mt-4 { margin-top: 32px; }

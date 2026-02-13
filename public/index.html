@@ -67,7 +67,7 @@
 
     <!-- Features -->
     <section class="features-strip">
-        <div class="features-grid">
+        <div class="features-grid" data-stagger>
             <div class="feature-item">
                 <div class="feature-icon">
                     <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,7 +110,7 @@
 
     <!-- About -->
     <section class="about-home">
-        <div class="about-home-grid">
+        <div class="about-home-grid" data-animate="fade-up">
             <div class="about-home-content">
                 <h2>About <span class="highlight">CK Upholstery</span></h2>
                 <p>CK Upholstery is a family-run business built on decades of experience, passion, and craftsmanship.</p>
@@ -123,7 +123,7 @@
 
     <!-- Fabrics Slideshow -->
     <section class="fabrics-section">
-        <div class="fabrics-container">
+        <div class="fabrics-container" data-animate="scale-in">
             <div class="fabrics-slideshow">
                 <div class="fabrics-overlay">
                     <h3>Premium Fabrics Used For Every Job</h3>
@@ -149,11 +149,11 @@
 
     <!-- Blog Preview -->
     <section class="blog-preview">
-        <div class="section-header">
+        <div class="section-header" data-animate="fade-up">
             <div class="section-label">From Our Blog</div>
             <h2 class="section-title">Latest Articles</h2>
         </div>
-        <div class="blog-cards">
+        <div class="blog-cards" data-stagger>
             <article class="blog-card">
                 <img class="blog-card-img" src="https://images.pexels.com/photos/1571457/pexels-photo-1571457.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A brief history of Upholstery">
                 <div class="blog-card-body">
@@ -190,11 +190,11 @@
     <!-- Contact Form -->
     <section class="contact-home">
         <div class="contact-home-inner">
-            <div class="section-header">
+            <div class="section-header" data-animate="fade-up">
                 <div class="section-label">Get In Touch</div>
                 <h2 class="section-title">Contact Us</h2>
             </div>
-            <form class="contact-form" action="https://formspree.io/f/movkqzzb" method="POST">
+            <form class="contact-form" data-animate="fade-up" action="https://formspree.io/f/movkqzzb" method="POST">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="contact-name">Name</label>
@@ -259,34 +259,6 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Hero slideshow
-        const slides = document.querySelectorAll('.hero-slideshow .slide');
-        let idx = 0;
-        setInterval(() => {
-            slides[idx].classList.remove('active');
-            idx = (idx + 1) % slides.length;
-            slides[idx].classList.add('active');
-        }, 4000);
-
-        // Fabric slideshow
-        const fabricSlides = document.querySelectorAll('.fabrics-slide');
-        let fIdx = 0;
-        setInterval(() => {
-            fabricSlides[fIdx].classList.remove('active');
-            fIdx = (fIdx + 1) % fabricSlides.length;
-            fabricSlides[fIdx].classList.add('active');
-        }, 3000);
-
-        // Hamburger
-        const hamburger = document.getElementById('hamburger-menu');
-        const nav = document.querySelector('header nav');
-        hamburger.addEventListener('click', () => nav.classList.toggle('open'));
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => nav.classList.remove('open'));
-        });
-    });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

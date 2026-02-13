@@ -38,7 +38,7 @@
 
     <section class="section">
         <div class="container">
-            <div class="about-text-full">
+            <div class="about-text-full" data-animate="fade-up">
                 <div class="about-text">
                     <h2>Established in 2007, CK Upholstery is a trusted name in the industry</h2>
                     <p>Founded by Murat Yilmaz, who brings more than 16 years of experience to the business.</p>
@@ -82,15 +82,6 @@
         <hr class="footer-separator">
     </footer>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const hamburger = document.getElementById('hamburger-menu');
-        const nav = document.querySelector('header nav');
-        hamburger.addEventListener('click', () => nav.classList.toggle('open'));
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => nav.classList.remove('open'));
-        });
-    });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -72,7 +72,7 @@
     <!-- Services -->
     <section class="section">
         <div class="container">
-            <div class="services-grid">
+            <div class="services-grid" data-stagger>
                 <div class="service-card">
                     <img class="service-card-img" src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Re-Upholstery & Restoration">
                     <div class="service-card-body">
@@ -95,7 +95,7 @@
                     </div>
                 </div>
             </div>
-            <div class="cta-banner">
+            <div class="cta-banner" data-animate="fade-up">
                 <a href="/contact" class="button mt-4">Get a Free Consultation</a>
             </div>
         </div>
@@ -104,12 +104,12 @@
     <!-- Customer Types -->
     <section class="section section-alt">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-animate="fade-up">
                 <div class="section-label">Our Clients</div>
                 <h2 class="section-title">Who We Work With</h2>
                 <p class="section-subtitle">CK Upholstery proudly serves a diverse range of clients, delivering exceptional results for every project, no matter the scale or setting.</p>
             </div>
-            <div class="customer-types-grid">
+            <div class="customer-types-grid" data-stagger>
                 <div class="customer-type-card">
                     <span class="customer-type-icon">&#127968;</span>
                     <h3>Residential</h3>
@@ -132,12 +132,12 @@
     <!-- Fabric Selection -->
     <section class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-animate="fade-up">
                 <div class="section-label">Quality Materials</div>
                 <h2 class="section-title">A Massive Range of Fabric Selections</h2>
                 <p class="section-subtitle">We offer an extensive collection of high-quality fabrics to suit every taste and project. Our team will guide you through the selection process, helping you choose the ideal fabric for durability, comfort, and style.</p>
             </div>
-            <div class="fabric-gallery">
+            <div class="fabric-gallery" data-stagger>
                 <img src="https://covertex-website.transforms.svdcdn.com/production/images/Maximo-Image.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1685453312&s=c34d5f17ea580f56f9f661017a9bb130" alt="Maximo Fabric">
                 <img src="https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/uffizzi/Uffizi-min-new.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1742473856&s=1929ccc5dc062d000df06694e699f17e" alt="Uffizi Fabric">
                 <img src="https://covertex-website.transforms.svdcdn.com/production/images/fabric-images/dolce/DOLCE-1.jpg?w=600&h=740&q=80&fm=jpg&fit=min&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1674214947&s=5734b6ff80a808049ceb6486a85964e2" alt="Dolce Fabric">
@@ -180,15 +180,6 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const hamburger = document.getElementById('hamburger-menu');
-        const nav = document.querySelector('header nav');
-        hamburger.addEventListener('click', () => nav.classList.toggle('open'));
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => nav.classList.remove('open'));
-        });
-    });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
