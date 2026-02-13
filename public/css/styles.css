@@ -383,22 +383,9 @@ nav a:hover, nav a.active {
   background: var(--gray-50);
 }
 .about-home-grid {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 48px;
-  align-items: center;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 32px;
-}
-.about-home-logo {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-  border-radius: var(--radius-lg);
-  background: var(--white);
-  padding: 16px;
-  box-shadow: var(--shadow-md);
 }
 .about-home-content h2 {
   font-size: 2rem;
@@ -416,8 +403,7 @@ nav a:hover, nav a.active {
 
 @media (max-width: 768px) {
   .about-home { padding: 56px 0; }
-  .about-home-grid { grid-template-columns: 1fr; gap: 24px; text-align: center; padding: 0 20px; }
-  .about-home-logo { margin: 0 auto; width: 100px; height: 100px; }
+  .about-home-grid { text-align: center; padding: 0 20px; }
   .about-home-content h2 { font-size: 1.7rem; }
 }
 
