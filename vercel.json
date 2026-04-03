@@ -1,0 +1,7 @@
+{
+  "outputDirectory": "public",
+  "routes": [
+    { "src": "/(.*)\\.html", "dest": "/$1.html" },
+    { "src": "/", "dest": "/index.html" }
+  ]
+}
