@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/contact-us", "destination": "/contact", "permanent": true }
+  ]
+}
