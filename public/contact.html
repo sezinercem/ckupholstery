@@ -7,25 +7,25 @@
     <meta name="description" content="Contact CK Upholstery in Epping, Essex for expert re-upholstery, restoration, and bespoke furniture services. Email, call, or use our contact form for a no-obligation quote.">
     <meta name="keywords" content="Contact CK Upholstery, Upholstery Epping, Furniture Restoration Essex, Bespoke Furniture, Re-Upholstery, Collection and Delivery, CK Upholstery Contact, Essex Upholsterers">
     <meta name="author" content="CK Upholstery">
-    <link rel="canonical" href="https://ckupholstery.co.uk/contact">
+    <link rel="canonical" href="https://www.ckupholstery.co.uk/contact">
     <meta property="og:title" content="Contact Us | CK Upholstery | Epping, Essex">
     <meta property="og:description" content="Contact CK Upholstery for expert upholstery, restoration, and bespoke furniture services in Epping, Essex. Get in touch for a free quote.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ckupholstery.co.uk/contact">
+    <meta property="og:url" content="https://www.ckupholstery.co.uk/contact">
     <meta property="og:image" content="https://www.ckupholstery.co.uk/images/CK%20Upholstery%20logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact Us | CK Upholstery | Epping, Essex">
     <meta name="twitter:description" content="Contact CK Upholstery for expert upholstery, restoration, and bespoke furniture services in Epping, Essex. Get in touch for a free quote.">
     <meta name="twitter:image" content="https://www.ckupholstery.co.uk/images/CK%20Upholstery%20logo.png">
     <link rel="icon" href="https://www.ckupholstery.co.uk/images/CK%20Upholstery%20logo.png" type="image/png">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "CK Upholstery",
       "image": "https://www.ckupholstery.co.uk/images/CK%20Upholstery%20logo.png",
-      "url": "https://ckupholstery.co.uk/contact",
+      "url": "https://www.ckupholstery.co.uk/contact",
       "telephone": "+447944715635",
       "email": "sales@ckupholstery.co.uk",
       "address": {
@@ -38,22 +38,24 @@
       }
     }
     </script>
+    <script src="/js/tracking-config.js" defer></script>
+    <script src="/js/main.js" defer></script>
 </head>
 <body>
 
     <header>
         <div class="header-container">
             <a href="/">
-                <img src="images/CK Upholstery logo.png" alt="CK Upholstery Logo" class="logo">
+                <img src="/images/CK Upholstery logo.png" alt="CK Upholstery Logo" class="logo">
             </a>
             <div class="hamburger" id="hamburger-menu" aria-label="Open menu" tabindex="0">
                 <span></span><span></span><span></span>
             </div>
             <nav>
                 <a href="/">Home</a>
-                <a href="services">Products &amp; Services</a>
-                <a href="blog">Blog</a>
-                <a href="contact">Contact Us</a>
+                <a href="/services">Products &amp; Services</a>
+                <a href="/blog">Blog</a>
+                <a href="/contact">Contact Us</a>
             </nav>
         </div>
     </header>
@@ -69,11 +71,18 @@
                 <div class="contact-form-card">
                     <h2>Send Us a Message</h2>
                     <form class="contact-form" action="https://formspree.io/f/movkqzzb" method="POST">
-                        <input type="text" name="name" placeholder="Name" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="tel" name="number" placeholder="Phone Number" required>
-                        <input type="text" name="location" placeholder="Location">
-                        <textarea name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
+                        <label for="enquiry-name">Name</label>
+                        <input type="text" id="enquiry-name" name="name" autocomplete="name" placeholder="Name" required>
+                        <label for="enquiry-email">Email</label>
+                        <input type="email" id="enquiry-email" name="email" autocomplete="email" placeholder="Email" required>
+                        <label for="enquiry-phone">Phone number</label>
+                        <input type="tel" id="enquiry-phone" name="phone" autocomplete="tel" placeholder="Phone Number" required>
+                        <label for="enquiry-location">Location</label>
+                        <input type="text" id="enquiry-location" name="location" autocomplete="address-level2" placeholder="Location">
+                        <label for="enquiry-message">Tell us about your project</label>
+                        <textarea id="enquiry-message" name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
+                        <p class="form-privacy">We use your details to respond to your enquiry. <a href="/privacy">Privacy notice</a>.</p>
+                        <p class="form-status" role="status" aria-live="polite"></p>
                         <button type="submit" class="button">Send Message</button>
                     </form>
                 </div>
@@ -102,20 +111,20 @@
         </div>
     </section>
 
-    <a href="https://wa.me/447944715635?text=Hi%2C%20I%27m%20interested%20in%20upholstery%20services" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+    <a href="https://wa.me/447944715635?text=Hi%2C%20I%27m%20interested%20in%20upholstery%20services" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-logo">
-                <img src="images/CK Upholstery logo.png" alt="CK Upholstery Logo">
+                <img src="/images/CK Upholstery logo.png" alt="CK Upholstery Logo">
             </div>
             <nav class="footer-links">
                 <a href="/">Home</a>
-                <a href="services">Products &amp; Services</a>
-                <a href="blog">Blog</a>
-                <a href="contact">Contact Us</a>
+                <a href="/services">Products &amp; Services</a>
+                <a href="/blog">Blog</a>
+                <a href="/contact">Contact Us</a>
             </nav>
             <div class="footer-contact">
                 <h4>Contact Us</h4>
@@ -127,11 +136,12 @@
             <div class="quick-links-title">Quick Links</div>
             <ul class="quick-links-list">
                 <li><a href="/">Home</a></li>
-                <li><a href="services">Products &amp; Services</a></li>
-                <li><a href="blog">Blog</a></li>
-                <li><a href="contact">Contact Us</a></li>
+                <li><a href="/services">Products &amp; Services</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact Us</a></li>
             </ul>
         </div>
+        <p class="privacy-link"><a href="/privacy">Privacy &amp; cookies</a></p>
         <hr class="footer-separator">
     </footer>
 
